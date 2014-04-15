@@ -6,6 +6,7 @@ class Admin extends MY_Controller
         parent::__construct();
         // Whatever
 #        $this->data['stuff'] = $whatever;
+        $this->template->set_layout('admin');
     }
     
     function index(){
