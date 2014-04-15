@@ -9,8 +9,15 @@
         <script type="text/javascript" src="/assets/js/jquery-1.10.2.min.js"></script> 
         <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>      
         <style>
+            body{
+                padding-bottom: 80px;
+            }
+          
             .nav-tabs{
                 font-size: 36px;
+            }
+            .container-main{
+                padding-left: 20px;
             }
             
             @media (min-width:1200px) { 
@@ -35,7 +42,7 @@
                 </ul>
             </div>
         </div>
-        <div class="container">
+        <div class="container container-main">
 
             <!-- Main component for a primary marketing message or call to action -->
             <div>
