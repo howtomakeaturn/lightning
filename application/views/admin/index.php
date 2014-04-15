@@ -56,7 +56,7 @@
 </label>
 <hr />
 <h3>您要在網站展示產品目錄嗎？</h3>
-<span class="help-block">開啟產品目錄功能，在網站上展示產品目錄</span>
+<span class="help-block">您公司有提供目錄讓客戶參考嗎？有的話建議啟動此功能。</span>
 <label class='contact-information-text'>
     <input type='radio' name='menu' class='form-controls' />
     要
