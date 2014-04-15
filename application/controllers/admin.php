@@ -27,4 +27,7 @@ class Admin extends MY_Controller
     function sort(){
         $this->template->build('admin/sort');
     }
+    function news(){
+        $this->template->build('admin/news');
+    }
 }

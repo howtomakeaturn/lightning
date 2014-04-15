@@ -52,7 +52,7 @@
             <div class="navbar-header">
                 <ul class="nav nav-tabs">
                   <li><a href="/admin/index">管理</a></li>
-                  <li><a href="#">新聞</a></li>
+                  <li><a href="/admin/news">新聞</a></li>
                   <li><a href="/admin/page">頁面</a></li>
                   <li><a href="/admin/product">產品</a></li>
                   <li><a href="/admin/sort">順序</a></li>
