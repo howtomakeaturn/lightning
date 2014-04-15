@@ -11,11 +11,11 @@
 <h3>
     產品目錄
     <button class='btn btn-lg btn-primary'><i class="fa fa-folder-open pull-left"></i>增加類別</button>
-    <button class='btn btn-lg btn-primary'><i class="fa fa-suitcase pull-left"></i>增加產品 </button>
 </h3>
 <p>您的產品目錄會展示這些產品。</p>
 <table class='table table-hover table-bordered'>
-    <caption class='product_caption'>增白劑系列</caption>
+    <caption class='product_caption'>增白劑系列    <button class='btn btn-lg btn-primary'><i class="fa fa-suitcase pull-left"></i>增加產品 </button>
+</caption>
     <tr>
         <th width=70%>產品名稱</th>
         <th width=30%>操作</th>
@@ -93,7 +93,8 @@
 </table>
 
 <table class='table table-hover table-bordered'>
-    <caption class='product_caption'>後處理加工</caption>
+    <caption class='product_caption'>後處理加工    <button class='btn btn-lg btn-primary'><i class="fa fa-suitcase pull-left"></i>增加產品 </button>
+</caption>
     <tr>
         <th width=70%>產品名稱</th>
         <th width=30%>操作</th>
@@ -171,7 +172,8 @@
 </table>
 
 <table class='table table-hover table-bordered'>
-    <caption class='product_caption'>精練滲透劑</caption>
+    <caption class='product_caption'>精練滲透劑    <button class='btn btn-lg btn-primary'><i class="fa fa-suitcase pull-left"></i>增加產品 </button>
+</caption>
     <tr>
         <th width=70%>產品名稱</th>
         <th width=30%>操作</th>
