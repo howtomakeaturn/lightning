@@ -6,7 +6,7 @@
 </label>
 
 <h3>放幾張圖片到首頁嗎？</h3>
-<span class="help-block">建議您擺放產品照片、公司照片、老闆照片、工廠照片，讓客戶更信任您。</span>
+<span class="help-block">例如：產品照片、公司照片、老闆照片、工廠照片，讓客戶更信任您。</span>
 <input type='file' class='form-control' />
 
 <label class='contact-information-text'>
