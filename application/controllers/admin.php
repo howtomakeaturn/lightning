@@ -24,4 +24,7 @@ class Admin extends MY_Controller
     function product(){
         $this->template->build('admin/product');
     }
+    function sort(){
+        $this->template->build('admin/sort');
+    }
 }
