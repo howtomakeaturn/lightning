@@ -83,3 +83,11 @@
         </td>
     </tr>
 </table>
+
+<!-- this for weird position bug 
+       not neccessary at all, though -->
+.
+<table class='table table-hover table-bordered'>
+
+</table>
+
