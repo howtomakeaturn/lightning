@@ -9,6 +9,20 @@
         <script type="text/javascript" src="/assets/js/jquery-1.10.2.min.js"></script> 
         <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>      
         <style>
+            #background {
+                width: 100%; 
+                height: 100%; 
+                position: fixed; 
+                left: 0px; 
+                top: 0px; 
+                z-index: -1; /* Ensure div tag stays behind content; -999 might work, too. */
+            }
+
+            .stretch {
+                width:100%;
+                height:100%;
+            }          
+          
             body{
                 padding-bottom: 80px;
             }
@@ -29,6 +43,10 @@
         </style>
     </head>
     <body>
+        <div id="background">
+            <img src="/assets/img/background/Elegant_Background-2.jpg" class="stretch" alt="" />
+        </div>
+      
         <div class="container">
             <div class="navbar-header">
                 <ul class="nav nav-tabs">
