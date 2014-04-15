@@ -1,3 +1,15 @@
+<style>
+    .bg_text{
+        font-size: 20px;
+    }
+  
+    .thumbnail{
+        max-width: 300px;
+        width: 100%;
+    }
+
+</style>
+
 <h3>您的公司有LOGO圖片嗎？</h3>
 <input type='file' class='form-control' />
 <label class='contact-information-text'>
@@ -13,5 +25,63 @@
     <input type='checkbox' class='form-controls' />
     暫不擺放圖片
 </label>
+
+<h3>設定您的背景圖片</h3>
+<div class='row'>
+    <div class='col-md-3'>
+        <label class='bg_text'><input type='radio' />綺麗雅緻</label>
+        <img src="/assets/img/background/Elegant_Background-1.jpg" class="thumbnail" alt="" />
+    </div>
+    <div class='col-md-3'>
+        <label class='bg_text'><input type='radio' />潔淨典雅</label>
+        <img src="/assets/img/background/Elegant_Background-2.jpg" class="thumbnail" alt="" />
+    </div>
+    <div class='col-md-3'>
+        <label class='bg_text'><input type='radio' />昏彩沉著</label>
+        <img src="/assets/img/background/Elegant_Background-3.jpg" class="thumbnail" alt="" />
+    </div>
+    <div class='col-md-3'>
+        <label class='bg_text'><input type='radio' />清澈智慧</label>
+        <img src="/assets/img/background/Elegant_Background-4.jpg" class="thumbnail" alt="" />
+    </div>
+</div>
+
+<div class='row'>
+    <div class='col-md-3'>
+        <label class='bg_text'><input type='radio' />綺麗雅緻</label>
+        <img src="/assets/img/background/Elegant_Background-5.jpg" class="thumbnail" alt="" />
+    </div>
+    <div class='col-md-3'>
+        <label class='bg_text'><input type='radio' />潔淨典雅</label>
+        <img src="/assets/img/background/Elegant_Background-6.jpg" class="thumbnail" alt="" />
+    </div>
+    <div class='col-md-3'>
+        <label class='bg_text'><input type='radio' />昏彩沉著</label>
+        <img src="/assets/img/background/Elegant_Background-7.jpg" class="thumbnail" alt="" />
+    </div>
+    <div class='col-md-3'>
+        <label class='bg_text'><input type='radio' />清澈智慧</label>
+        <img src="/assets/img/background/Elegant_Background-8.jpg" class="thumbnail" alt="" />
+    </div>
+</div>
+
+<div class='row'>
+    <div class='col-md-3'>
+        <label class='bg_text'><input type='radio' />綺麗雅緻</label>
+        <img src="/assets/img/background/Elegant_Background-9.jpg" class="thumbnail" alt="" />
+    </div>
+    <div class='col-md-3'>
+        <label class='bg_text'><input type='radio' />潔淨典雅</label>
+        <img src="/assets/img/background/Elegant_Background-10.jpg" class="thumbnail" alt="" />
+    </div>
+    <div class='col-md-3'>
+        <label class='bg_text'><input type='radio' />昏彩沉著</label>
+        <img src="/assets/img/background/Elegant_Background-11.jpg" class="thumbnail" alt="" />
+    </div>
+    <div class='col-md-3'>
+        <label class='bg_text'><input type='radio' />清澈智慧</label>
+        <img src="/assets/img/background/Elegant_Background-12.jpg" class="thumbnail" alt="" />
+    </div>
+</div>
 
 
