@@ -15,7 +15,7 @@
     </tr>
     <tr>
         <td><a class='page_name' href='#'>公司簡介</a></td>
-        <td><a class='page_time' href='#'>2014-04-24 21:00</a></td>
+        <td>2014-04-24 21:00</td>
         <td>
             <a class="btn btn-lg btn-default" href="#">
               <i class="fa fa-flag pull-left"></i>檢視
@@ -30,7 +30,7 @@
     </tr>
     <tr>
         <td><a class='page_name' href='#'>服務</a></td>
-        <td><a class='page_time' href='#'>2014-04-24 21:00</a></td>
+        <td>2014-04-24 21:00</td>
         <td>
             <a class="btn btn-lg btn-default" href="#">
               <i class="fa fa-flag pull-left"></i>檢視
@@ -45,7 +45,7 @@
     </tr>
     <tr>
         <td><a class='page_name' href='#'>聯絡我們</a></td>
-        <td><a class='page_time' href='#'>2014-04-24 21:00</a></td>
+        <td>2014-04-24 21:00</td>
         <td>
             <a class="btn btn-lg btn-default" href="#">
               <i class="fa fa-flag pull-left"></i>檢視
@@ -60,7 +60,7 @@
     </tr>
     <tr>
         <td><a class='page_name' href='#'>董事名單</a></td>
-        <td><a class='page_time' href='#'>2014-04-24 21:00</a></td>
+        <td>2014-04-24 21:00</td>
         <td>
             <a class="btn btn-lg btn-default" href="#">
               <i class="fa fa-flag pull-left"></i>檢視
@@ -75,7 +75,7 @@
     </tr>
     <tr>
         <td><a class='page_name' href='#'>緣由宗旨</a></td>
-        <td><a class='page_time' href='#'>2014-04-24 21:00</a></td>
+        <td>2014-04-24 21:00</td>
         <td>
             <a class="btn btn-lg btn-default" href="#">
               <i class="fa fa-flag pull-left"></i>檢視
