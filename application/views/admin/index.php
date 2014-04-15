@@ -11,9 +11,7 @@
 <input type='text' class='form-control' />
 
 <h3>簡介您的公司？</h3>
-<textarea class='form-control' rows='6'>
-
-</textarea>
+<textarea class='form-control' rows='6'></textarea>
 
 <h3>客戶要用哪支電話聯絡您？</h3>
 <input type='text' class='form-control' />
