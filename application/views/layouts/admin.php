@@ -53,7 +53,7 @@
                 <ul class="nav nav-tabs">
                   <li><a href="/admin/index">管理</a></li>
                   <li><a href="#">新聞</a></li>
-                  <li><a href="#">頁面</a></li>
+                  <li><a href="/admin/page">頁面</a></li>
                   <li><a href="#">產品</a></li>
                   <li><a href="#">順序</a></li>
                   <li><a href="/admin/layout">美觀</a></li>

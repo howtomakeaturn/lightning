@@ -18,4 +18,7 @@ class Admin extends MY_Controller
     function support(){
         $this->template->build('admin/support');
     }
+    function page(){
+        $this->template->build('admin/page');
+    }
 }
