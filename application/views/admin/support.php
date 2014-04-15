@@ -26,7 +26,7 @@
         <button class='btn btn-primary'>送出</button>
         <h3>或是Email與我聯絡：</h3>
         <a href='mailto:howtomakeaturn@hotmail.com'>howtomakeaturn@hotmail.com</a>
-        <h3>謝謝你使用這套「閃電」系統，希望符合你的需求。</h3>
+        <h3>謝謝你使用這套「閃電」系統。</h3>
     </div>
     <div class='col-md-6'>
         <img class='author_img' src='/assets/img/me.jpg' />
@@ -39,6 +39,11 @@
             我開發了這套叫做「閃電」的系統，讓你像閃電一樣，瞬間做好你的網站。<br />
             並且你隨時可以調整網站內容。<br />
             需要什麼功能、有任何問題或意見，歡迎你直接與我聯絡。<br />
+            <ul>
+                <li>Facebook: <a href='https://www.facebook.com/chuanhao.you'>https://www.facebook.com/chuanhao.you</a></li>
+                <li>E-mail: howtomakeaturn@hotmail.com</li>
+                <li>我的網誌：<a href='http://blog.turn.tw'>http://blog.turn.tw</a></li>
+            </ul>            
             <br />
             尤川豪 敬上
         </p>
