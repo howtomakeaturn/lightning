@@ -26,7 +26,7 @@
         <button class='btn btn-primary'>送出</button>
         <h3>或是Email與我聯絡：</h3>
         <a href='mailto:howtomakeaturn@hotmail.com'>howtomakeaturn@hotmail.com</a>
-        <h3>謝謝你使用這套「閃電」系統。</h3>
+        <h3>謝謝你使用這套系統。我會努力讓它變得更好。</h3>
     </div>
     <div class='col-md-6'>
         <img class='author_img' src='/assets/img/me.jpg' />
