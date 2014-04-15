@@ -21,4 +21,7 @@ class Admin extends MY_Controller
     function page(){
         $this->template->build('admin/page');
     }
+    function product(){
+        $this->template->build('admin/product');
+    }
 }
