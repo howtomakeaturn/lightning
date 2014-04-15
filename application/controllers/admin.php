@@ -12,4 +12,7 @@ class Admin extends MY_Controller
     function index(){
         $this->template->build('admin/index');
     }
+    function layout(){
+        $this->template->build('admin/layout');
+    }
 }
