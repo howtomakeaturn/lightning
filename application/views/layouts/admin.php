@@ -32,6 +32,7 @@
             }
             .container-main{
                 padding-left: 20px;
+                padding-top: 20px;
             }
             
             @media (min-width:1200px) { 
@@ -56,7 +57,7 @@
                   <li><a href="#">產品</a></li>
                   <li><a href="#">順序</a></li>
                   <li><a href="/admin/layout">美觀</a></li>
-                  <li><a href="#">支援</a></li>
+                  <li><a href="/admin/support">支援</a></li>
                 </ul>
             </div>
         </div>
