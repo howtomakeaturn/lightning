@@ -46,3 +46,15 @@
     <input type='radio' name='menu' class='form-controls' />
     暫時不要
 </label>
+
+
+<h3>您會定期寫文章、發布新消息、公佈最新資訊給客戶嗎？</h3>
+<span class="help-block">您公司需要「新聞」系統（部落格系統）嗎？有的話建議啟動此功能，並且前往「新聞」進行編輯。</span>
+<label class='contact-information-text'>
+    <input type='radio' name='menu' class='form-controls' />
+    會
+</label>
+<label class='contact-information-text'>
+    <input type='radio' name='menu' class='form-controls' />
+    暫時不會
+</label>
