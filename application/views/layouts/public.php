@@ -39,7 +39,7 @@
       <div class='container'>
           <header>
 <!--              <img class='ln-logo' src='/assets/img/mock/logo.png' /> -->
-              <nav class="navbar navbar-inverse" role="navigation">
+              <nav class="navbar navbar-default" role="navigation">
                 <div class="container-fluid">
                   <!-- Brand and toggle get grouped for better mobile display -->
                   <div class="navbar-header">
