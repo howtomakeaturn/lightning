@@ -24,7 +24,12 @@
             .navbar{
                 margin-top: 40px;
             }
-            
+            .main-container{
+                min-height: 450px;
+            }
+            footer{
+                margin-top: 40px;
+            }
     </style>
 	</head>
 	<body>
@@ -62,8 +67,15 @@
               </nav>
           </header>
       </div>
-      <div class='container'>
+      <div class='container main-container'>
       		<?php echo $template['body']; ?>
+      </div>
+      <!-- FOOTER -->
+      <div class='container'>
+          <footer>
+            <p class="pull-right"><a href="#">Back to top</a></p>
+            <p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+          </footer>      
       </div>
 	</body>
 </html>
