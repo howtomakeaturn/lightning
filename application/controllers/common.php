@@ -9,6 +9,6 @@ class Common extends Public_Controller
     }
     
     function index(){
-        $this->template->build('common/index');
+        $this->template->build('themes/casual/index');
     }
 }

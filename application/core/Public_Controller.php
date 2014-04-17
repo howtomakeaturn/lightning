@@ -15,6 +15,6 @@ class Public_Controller extends MY_Controller{
             $this->template->set_theme('mobile');
         }
         */
-        $this->template->set_layout('public');
+        $this->template->set_layout('themes/casual');
     }
 }
