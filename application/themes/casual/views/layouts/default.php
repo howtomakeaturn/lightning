@@ -10,10 +10,10 @@
     <title>Business Casual Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/themes/casual/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/themes/casual/css/bootstrap.css" rel="stylesheet">
 
     <!-- Add custom CSS here -->
-    <link href="/themes/casual/css/business-casual.css" rel="stylesheet">
+    <link href="/assets/themes/casual/css/business-casual.css" rel="stylesheet">
 </head>
 
 <body>
@@ -67,8 +67,8 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="/themes/casual/js/jquery-1.10.2.js"></script>
-    <script src="/themes/casual/js/bootstrap.js"></script>
+    <script src="/assets/themes/casual/js/jquery-1.10.2.js"></script>
+    <script src="/assets/themes/casual/js/bootstrap.js"></script>
     <script>
     // Activates the Carousel
     $('.carousel').carousel({

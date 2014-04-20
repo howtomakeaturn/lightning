@@ -9,15 +9,15 @@ class Common extends Public_Controller
     }
     
     function index(){
-        $this->template->build('themes/casual/index');
+        $this->template->build('index');
     }
     function about(){
-        $this->template->build('themes/casual/about');
+        $this->template->build('about');
     }
     function blog(){
-        $this->template->build('themes/casual/blog');
+        $this->template->build('blog');
     }
     function contact(){
-        $this->template->build('themes/casual/contact');
+        $this->template->build('contact');
     }
 }

@@ -13,13 +13,13 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
                             <div class="item active">
-                                <img class="img-responsive img-full" src="/themes/casual/img/slide-1.jpg" alt="">
+                                <img class="img-responsive img-full" src="/assets/themes/casual/img/slide-1.jpg" alt="">
                             </div>
                             <div class="item">
-                                <img class="img-responsive img-full" src="/themes/casual/img/slide-2.jpg" alt="">
+                                <img class="img-responsive img-full" src="/assets/themes/casual/img/slide-2.jpg" alt="">
                             </div>
                             <div class="item">
-                                <img class="img-responsive img-full" src="/themes/casual/img/slide-3.jpg" alt="">
+                                <img class="img-responsive img-full" src="/assets/themes/casual/img/slide-3.jpg" alt="">
                             </div>
                         </div>
 

@@ -7,7 +7,7 @@
                     <hr>
                 </div>
                 <div class="col-md-6">
-                    <img class="img-responsive img-border-left" src="/themes/casual/img/slide-2.jpg" alt="">
+                    <img class="img-responsive img-border-left" src="/assets/themes/casual/img/slide-2.jpg" alt="">
                 </div>
                 <div class="col-md-6">
                     <p>This is a great place to introduce your company or project and describe what you do.</p>
