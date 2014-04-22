@@ -20,4 +20,7 @@ class Common extends Public_Controller
     function contact(){
         $this->template->build('contact');
     }
+    function menu(){
+        $this->template->build('menu');      
+    }
 }

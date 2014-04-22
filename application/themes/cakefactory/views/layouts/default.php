@@ -242,6 +242,7 @@
 
 											<li><a href="/common/blog"><img src="/assets/themes/cakefactory/img/nav-menu/nav3.jpg" class="img-responsive" alt="" /> Blog</a></li>
 
+											<li><a href="/common/menu"><img src="/assets/themes/cakefactory/img/nav-menu/nav4.jpg" class="img-responsive" alt="" /> Menu</a></li>
 
 											<li><a href="/common/contact"><img src="/assets/themes/cakefactory/img/nav-menu/nav5.jpg" class="img-responsive" alt="" /> Contact</a></li>
 										</ul>
