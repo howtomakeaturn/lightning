@@ -7,4 +7,7 @@ class Intro extends CI_Controller{
     function index(){
         $this->template->build('intro/index');
     }
+    function signup(){
+        $this->template->build('intro/signup');
+    }
 }

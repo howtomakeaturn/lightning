@@ -62,8 +62,9 @@
                         </button>
                         <div class="nav-collapse collapse">
                             <ul class="nav nav-pills ddmenu">
-                            <li class="active"><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
+                            <li><a href="/intro/index">介紹</a></li>
+                            <li class="active"><a href="/intro/signup">馬上申請</a></li>
+<!--                            <li><a href="about.html">About</a></li>
 							<li class="dropdown">
                             <a href="page.html" class="dropdown-toggle">Page <b class="caret"></b></a>
                             <ul class="dropdown-menu">
@@ -82,7 +83,7 @@
                             </ul>
                             </li>
 						    <li><a href="services.html">Services</a></li>
-						    <li><a href="portfolio.html">Portfolio</a></li>
+						    <li><a href="portfolio.html">Portfolio</a></li>-->
 						    <li><a href="contact.php">Contact</a></li>
                             </ul>
                             </div>
