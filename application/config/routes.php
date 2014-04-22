@@ -38,8 +38,22 @@
 |
 */
 
-$route['default_controller'] = "intro";
-$route['404_override'] = '';
+$url_host = $_SERVER['HTTP_HOST'];
+$url_segments = explode('.', $url_host);
+
+if (count($url_segments)==2){
+    $route['default_controller'] = "intro";
+    $route['404_override'] = '';  
+}
+else if (count($url_segments)==3){
+    $route['default_controller'] = "common"; 
+}
+else{
+    $route['default_controller'] = "intro";
+    $route['404_override'] = '';
+}
+
+
 
 
 /* End of file routes.php */
