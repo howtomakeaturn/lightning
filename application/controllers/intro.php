@@ -10,4 +10,7 @@ class Intro extends CI_Controller{
     function signup(){
         $this->template->build('intro/signup');
     }
+    function why(){
+        $this->template->build('intro/why');
+    }
 }
