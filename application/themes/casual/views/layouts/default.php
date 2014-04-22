@@ -42,6 +42,8 @@
                     </li>
                     <li><a href="/common/blog">Blog</a>
                     </li>
+                    <li><a href="/common/menu">Menu</a>
+                    </li>
                     <li><a href="/common/contact">Contact</a>
                     </li>
                 </ul>
