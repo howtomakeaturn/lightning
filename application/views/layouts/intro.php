@@ -52,7 +52,7 @@
 
                     <div id="divLogo" class="pull-left">
                         <a href="/intro/index" id="divSiteTitle">網路印象</a><br />
-                        <a href="index.html" id="divTagLine">月租費三百，建立官方網站不再需要上萬元！</a>
+                        <a href="index.html" id="divTagLine">建立官方網站不再需要上萬元！<br />月租費三百！滿意再續租！</a>
                     </div>
 
                     <div id="divMenuRight" class="pull-right">
