@@ -60,12 +60,14 @@
               <p>Telephone:    +1 123 456 7890</p>
               <p>FAX:                +1 123 456 7890</p>-->
               <p>E-mail: <?php echo $site->contact_email ?></p>
+              <!--
               <ul class="social">
                 <li><a href=""><img src="img/social/facebook.png" alt="icon-facebook"></a></li>
                 <li><a href=""><img src="img/social/twitter.png" alt="icon-twitter"></a></li>
                 <li><a href=""><img src="img/social/rss.png" alt="icon-rss"></a></li>
                 <li><a href=""><img src="img/social/mail.png" alt="icon-mail"></a></li>
             </ul>
+            -->
             </div>
           </div>
           

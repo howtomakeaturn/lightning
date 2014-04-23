@@ -62,7 +62,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <p>Copyright &copy; Company 2013</p>
+                    <p>Copyright &copy; 網路印象 2014</p>
                 </div>
             </div>
         </div>

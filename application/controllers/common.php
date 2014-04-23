@@ -8,18 +8,18 @@ class Common extends Public_Controller
     }
     
     function index(){
-        $this->template->build('index');
+        $this->template->build('index', $this->data);
     }
     function about(){
-        $this->template->build('about');
+        $this->template->build('about', $this->data);
     }
     function blog(){
-        $this->template->build('blog');
+        $this->template->build('blog', $this->data);
     }
     function contact(){
         $this->template->build('contact', $this->data);
     }
     function menu(){
-        $this->template->build('menu');      
+        $this->template->build('menu', $this->data);      
     }
 }

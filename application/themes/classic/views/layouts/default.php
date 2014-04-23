@@ -60,67 +60,24 @@
       <div class="container">
         <div class="row-fluid">    
 
-          <div class="span4">
+          <div class="span12">
             <h2>Visit Us</h2>
-            <p>8901 Street Road,</p>
-            <p>Cityname, D04 89GR.</p>
-            <p>Freephone:    +1 123 456 7890</p>
-            <p>Telephone:    +1 123 456 7890</p>
-            <p>FAX:                +1 123 456 7890</p>
-            <p>E-mail:<a href="#"> mail@demolink.org</a></p>
-            
+            <p><?php echo $site->contact_address ?></p>
+
+            <p>電話：<?php echo $site->contact_phone ?></p>
+
+            <p>E-mail:<a href="#"> <?php echo $site->contact_email ?></a></p>
+            <!--
             <ul class="social">
               <li><a href=""><img src="img/social/facebook_footer.png" alt="icon-facebook"></a></li>
               <li><a href=""><img src="img/social/twitter_footer.png" alt="icon-twitter"></a></li>
               <li><a href=""><img src="img/social/rss_footer.png" alt="icon-rss"></a></li>
               <li><a href=""><img src="img/social/mail_footer.png" alt="icon-mail"></a></li>
             </ul>
-
+            -->
           </div>
           
-          <div class="span4">
-            <h2>Working Hours</h2>
-            <ul class="working_hours">
-              <li>Monday <span>10:30am - 11:30pm</span></li>
-              <li>Tuesday  <span>10:30am - 11:30pm</span></li>
-              <li>Wednesday <span>10:30am - 11:30pm</span></li>
-              <li>Thursday <span>10:30am - 11:30pm</span></li>
-              <li>Friday <span>10:30am - 11:30pm</span></li>
-              <li>Saturday <span>10:30am - 11:30pm</span></li>
-              <li>Sunday <span>10:30am - 11:30pm</span></li>
-            </ul>
-          </div>
 
-          <div class="span4">
-            <h2>Newsletter SingUp</h2>
-
-            <!-- Begin MailChimp Signup Form -->
-              <div id="mc_embed_signup">
-                <form action="http://imaginacionweb.us4.list-manage.com/subscribe/post?u=f9297aa4909dff7a0b00a9726&amp;id=4f4fbf8f69" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                  <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="search...">
-                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-                </form>
-              </div>
-              <!--End mc_embed_signup-->
-
-            <div class="clearfix"></div>
-            
-            <h2>Latest New</h2>
-           <div class="lastes">
-
-            <div class="row-fluid">
-
-              <div class="span4">
-                <img src="img/slide_01.jpg" alt="">
-              </div>
-              <div class="span8">
-                <span>Mar 13, 2013</span>
-                <p>Fusce id turpis vel massa gravida interdum.</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
 
       </div>
     </div>
@@ -130,9 +87,10 @@
         <div class="container">
           <div class="row-fluid">
             <div class="span4">
-              <p>© 2013 Classic Restaurent  |  Privacy Policy</p>
+              <p>© 2014 網路印象</p>
             </div>
             <div class="span8">              
+                <!--
                 <ul>
                   <li><a href="index.html">Home</a></li>
                   <li><a href="about.html">About</a></li>
@@ -140,6 +98,7 @@
                   <li><a href="gallery.html">Gallery</a></li>
                   <li><a href="contact.html">Contact us</a></li>
                 </ul>              
+                -->
             </div>
           </div>
         </div>
