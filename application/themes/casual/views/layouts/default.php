@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Business Casual Template for Bootstrap</title>
+		<title><?php echo $template['title'] ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="/assets/themes/casual/css/bootstrap.css" rel="stylesheet">
@@ -18,7 +18,7 @@
 
 <body>
 
-    <div class="brand">Business Casual</div>
+    <div class="brand"><?php echo $template['title'] ?></div>
     <div class="address-bar">The Plaza | 5483 Start Bootstrap Ave. | Beverly Hills, California 26892 | 555.519.2013</div>
 
     <nav class="navbar navbar-default" role="navigation">

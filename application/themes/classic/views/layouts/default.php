@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Classic Resturant</title>
+		<title><?php echo $template['title'] ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -44,10 +44,10 @@
                 </li>
               </ul>
            </li>
-            <li><a href="/about">About us</a></li>
+            <li><a href="/about">About</a></li>
             <li><a href="/blog">Blog</a></li>
-            <li><a href="/menu">Our menu</a></li>
-            <li><a href="/contact">Contact us</a></li>
+            <li><a href="/menu">Menu</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -135,8 +135,8 @@
             <div class="span8">              
                 <ul>
                   <li><a href="index.html">Home</a></li>
-                  <li><a href="about.html">About us</a></li>
-                  <li><a href="menu.html">Our menu</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="menu.html">Menu</a></li>
                   <li><a href="gallery.html">Gallery</a></li>
                   <li><a href="contact.html">Contact us</a></li>
                 </ul>              

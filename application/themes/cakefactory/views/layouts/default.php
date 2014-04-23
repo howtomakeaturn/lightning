@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<!-- Title here -->
-		<title>Your Title - CakeFactory</title>
+		<title><?php echo $template['title'] ?></title>
 		<!-- Description, Keywords and Author -->
 		<meta name="description" content="Your description">
 		<meta name="keywords" content="Your,Keywords">
@@ -187,7 +187,7 @@
 								<div class="logo">
 									<img class="img-responsive" src="img/logo.png" alt="" />
 									<!-- Heading -->
-									<h1>CakeFactory</h1>
+									<h1><?php echo $template['title'] ?></h1>
 									<!-- Paragraph -->
 									<p>Facility ester expedite instinct.</p>
 								</div>

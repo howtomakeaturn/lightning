@@ -2,21 +2,18 @@
 class Public_Controller extends MY_Controller{
     function __construct(){
         parent::__construct();
-        /*
-        if($this->config->item('site_open') === FALSE){
-            show_error('Sorry the site is shut for now.');
-        }
-        */
+
+        $url_host = $_SERVER['HTTP_HOST'];
+        $url_segments = explode('.', $url_host);
+        $subdomain = $url_segments[0];
+        $this->load->database();
         
-        /*
-        // If the user is using a mobile, use a mobile theme
-        $this->load->library('user_agent');
-        if( $this->agent->is_mobile() ){
-            $this->template->set_theme('mobile');
-        }
-        */
-        $this->template->set_theme('classic');
-        //$this->template->set_theme('cakefactory');
-        // $this->template->set_layout('themes/casual');
+        // I think the codes can be further improved by JOIN statements
+        $site = $this->db->from('sites')->where('subdomain', $subdomain)->get()->row();
+        $layout = $this->db->from('layouts')->where('site_id', $site->id)->get()->row();
+        $theme = $this->db->from('themes')->where('id', $layout->theme_id)->get()->row();
+        
+        $this->template->set_theme($theme->name);
+        $this->template->title($site->name);
     }
 }
