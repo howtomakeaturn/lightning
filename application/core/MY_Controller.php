@@ -6,4 +6,12 @@ class MY_Controller extends CI_Controller{
       #  $user_id = $this->session->userdata('user_id');
         #$this->data['user'] = $this->user_lib->get($user_id);
     }
+    function is_post(){
+        if ( $this->input->server('REQUEST_METHOD') == 'POST' ){
+            return TRUE;
+        }
+        else{
+            return FALSE;
+        }
+    }
 }

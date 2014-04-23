@@ -1,5 +1,6 @@
 <div class="contentArea">
     <div class="divPanel notop page-content">
+        <form method="post" action="/intro/register"><!-- START THE FORM -->
         <div class="row-fluid">
             <!--Edit Main Content Area here-->
             <div class="span12" id="divMain">
@@ -15,14 +16,23 @@
     <div class="row-fluid">
         <div class='span4'>
 
-            <h3>您公司的網址如下：</h3>
-            <h4><a href='#'>http://example.com</a></h4>
+            <h3>請用email註冊帳號：</h3>
+            <input type='text' class='form-control' name='email' />
+
+            <h3>請輸入密碼：</h3>
+            <input type='password' class='form-control' name='password' />
+
+            <h3>您想註冊什麼網址？</h3>
+            
+            
+            <h4>http://<input type='text' >.example.com</h4>
 
             <h3>您的公司名稱？</h3>
             <input type='text' class='form-control' />
 
             <h3>簡介您的公司？</h3>
             <textarea class='form-control' rows='6'></textarea>
+            <button class='btn btn-primary'>確定</button>
         </div>
 
         <div class='span4'>
@@ -77,7 +87,7 @@
         </div>
         
     </div>
-
+    </form> <!-- END THE FORM -->
 </div>
 
 <style>

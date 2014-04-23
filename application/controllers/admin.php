@@ -7,6 +7,18 @@ class Admin extends MY_Controller
         // Whatever
 #        $this->data['stuff'] = $whatever;
         $this->template->set_layout('admin');
+        $this->load->library('session');
+
+$this->router->fetch_class();
+;
+                
+        if( (!$this->session->userdata('logged_in'))&&($this->router->fetch_method()!='login') ) {
+            $this->load->helper('url');
+            redirect('/admin/login');
+        }
+    }
+    function login(){
+        echo 'plz login';
     }
     
     function index(){
