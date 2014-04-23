@@ -57,9 +57,9 @@
 								<!-- Map holder -->
 								<div class="map-container">
 									<!-- Google Map -->
-                  <!--
+                  
 									<iframe	src="https://maps.google.co.in/?ie=UTF8&amp;ll=12.953997,77.63094&amp;spn=0.815042,1.352692&amp;t=m&amp;z=10&amp;output=embed"></iframe>
-                  -->
+                  
 								</div>
 							</div>
 						</div>
