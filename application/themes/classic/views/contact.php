@@ -50,7 +50,9 @@
           <div class="span6">
             <h2>Contact information</h2> 
             <div class="contact_information">           
+              <!--
               <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=brooklyn&amp;sll=40.65,-73.95&amp;sspn=0.299551,0.617294&amp;g=brooklyn&amp;ie=UTF8&amp;hq=&amp;hnear=Brooklyn,+Kings,+Nueva+York&amp;ll=40.65,-73.95&amp;spn=0.037445,0.077162&amp;t=m&amp;z=14&amp;output=embed"></iframe>
+              -->
               <p><?php echo $site->name ?></p>
               <p><?php echo $site->contact_address ?></p>
               <p>電話：<?php echo $site->contact_phone ?></p>
@@ -68,6 +70,7 @@
           </div>
           
           <div class="span6">
+            <!--
             <h2>Contact Form</h2>
             <div class="contact_form">
               <form id="form" action="send_mail.php">
@@ -86,7 +89,9 @@
               </form>
              <div id="result"></div>
             </div>
+            -->
           </div>
+          
         </div>
       </div>
       

@@ -51,42 +51,22 @@
 										</div>
 									</div>
 								</div><!--/ Inner row end -->
-								<!-- Contact form -->
-								<div class="contact-form">
-									<!-- Heading -->
-									<h3>Contact Form</h3>
-									<!-- Form -->
-									<form role="form">
-										<div class="form-group">
-											<!-- Form input -->
-											<input class="form-control" type="text" placeholder="Name" />
-										</div>
-										<div class="form-group">
-											<!-- Form input -->
-											<input class="form-control" type="email" placeholder="Email" />
-										</div>
-										<div class="form-group">
-											<!-- Form text area -->
-											<textarea class="form-control" rows="3" placeholder="Message..."></textarea>
-										</div>
-										<!-- Form button -->
-										<button class="btn btn-danger btn-sm" type="submit">Send</button>&nbsp;
-										<button class="btn btn-default btn-sm" type="reset">Reset</button>
-									</form>
-								</div><!--/ Contact form end -->
+
 							</div>
 							<div class="col-md-6">
 								<!-- Map holder -->
 								<div class="map-container">
 									<!-- Google Map -->
+                  <!--
 									<iframe	src="https://maps.google.co.in/?ie=UTF8&amp;ll=12.953997,77.63094&amp;spn=0.815042,1.352692&amp;t=m&amp;z=10&amp;output=embed"></iframe>
+                  -->
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 				
-				<!-- Contact Us End -->
+				<!-- Contact  Us End -->
 			
 				<!-- Showcase Start -->
 				
