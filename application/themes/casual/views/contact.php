@@ -3,7 +3,7 @@
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center">Contact <strong>business casual</strong>
+                    <h2 class="intro-text text-center">Contact <strong><?php echo $site->name ?></strong>
                     </h2>
                     <hr>
                 </div>
@@ -12,11 +12,11 @@
                     <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed"></iframe>
                 </div>
                 <div class="col-md-4">
-                    <p>Phone: <strong>555.519.2013</strong>
+                    <p>電話： <strong><?php echo $site->contact_phone ?></strong>
                     </p>
-                    <p>Email: <strong>feedback@startbootstrap.com</strong>
+                    <p>Email: <strong><?php echo $site->contact_email ?></strong>
                     </p>
-                    <p>Address: <strong>The Plaza<br>5483 Start Bootstrap Ave.<br>Beverley Hills, CA 26829</strong>
+                    <p>地址：<?php echo $site->contact_address ?>
                     </p>
                 </div>
                 <div class="clearfix"></div>

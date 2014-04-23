@@ -1,5 +1,7 @@
 <?php
 class Public_Controller extends MY_Controller{
+    protected $data = array();
+  
     function __construct(){
         parent::__construct();
 
@@ -15,5 +17,7 @@ class Public_Controller extends MY_Controller{
         
         $this->template->set_theme($theme->name);
         $this->template->title($site->name);
+        
+        $this->data['site'] = $site;
     }
 }

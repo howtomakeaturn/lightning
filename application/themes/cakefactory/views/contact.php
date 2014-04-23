@@ -32,8 +32,8 @@
 										<!-- Contact content details -->
 										<div class="contact-details">
 											<!-- Heading -->
-											<h4>Location</h4><!-- Address / Icon -->
-											<i class="fa fa-map-marker br-red"></i> <span>#768, 5th floor, N S Building,<br />Csm Block, Park Road,<br /> Bangalore - 234567</span>
+											<h4>地址</h4><!-- Address / Icon -->
+											<i class="fa fa-map-marker br-red"></i> <span><?php echo $site->contact_address ?></span>
 											<div class="clearfix"></div>
 										</div>
 									</div>
@@ -41,12 +41,12 @@
 										<!-- Contact content details -->
 										<div class="contact-details">
 											<!-- Heading -->
-											<h4>On-line Order</h4>
+											<h4>聯絡我</h4>
 											<!-- Contact Number / Icon -->
-											<i class="fa fa-phone br-green"></i> <span>+91 88-88-888888</span>
+											<i class="fa fa-phone br-green"></i> <span><?php echo $site->contact_phone ?></span>
 											<div class="clearfix"></div>
 											<!-- Email / Icon -->
-											<i class="fa fa-envelope-o br-lblue"></i> <span><a href="#">abc@example.com</a></span>
+											<i class="fa fa-envelope-o br-lblue"></i> <span><a href="#"><?php echo $site->contact_email ?></a></span>
 											<div class="clearfix"></div>
 										</div>
 									</div>

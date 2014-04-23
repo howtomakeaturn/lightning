@@ -17,7 +17,7 @@ class Common extends Public_Controller
         $this->template->build('blog');
     }
     function contact(){
-        $this->template->build('contact');
+        $this->template->build('contact', $this->data);
     }
     function menu(){
         $this->template->build('menu');      

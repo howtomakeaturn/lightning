@@ -23,7 +23,7 @@
           </div>
           <div class="span4">
             <div class="phone">
-              <p>call us : <span class="color">123 456 789</span></p>
+              <p>電話：<span class="color"><?php echo $site->contact_phone ?></span></p>
             </div>
           </div>
         </div>
@@ -51,13 +51,13 @@
             <h2>Contact information</h2> 
             <div class="contact_information">           
               <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=brooklyn&amp;sll=40.65,-73.95&amp;sspn=0.299551,0.617294&amp;g=brooklyn&amp;ie=UTF8&amp;hq=&amp;hnear=Brooklyn,+Kings,+Nueva+York&amp;ll=40.65,-73.95&amp;spn=0.037445,0.077162&amp;t=m&amp;z=14&amp;output=embed"></iframe>
-              <p>Classic Restaurent</p>
-              <p>8901 Street Road,</p>
-              <p>Cityname, D04 89GR.</p>
-              <p>Freephone:    +1 123 456 7890</p>
+              <p><?php echo $site->name ?></p>
+              <p><?php echo $site->contact_address ?></p>
+              <p>電話：<?php echo $site->contact_phone ?></p>
+<!--              <p>Freephone:    +1 123 456 7890</p>
               <p>Telephone:    +1 123 456 7890</p>
-              <p>FAX:                +1 123 456 7890</p>
-              <p>E-mail: <a href="">mail@demolink.org</a></p>
+              <p>FAX:                +1 123 456 7890</p>-->
+              <p>E-mail: <?php echo $site->contact_email ?></p>
               <ul class="social">
                 <li><a href=""><img src="img/social/facebook.png" alt="icon-facebook"></a></li>
                 <li><a href=""><img src="img/social/twitter.png" alt="icon-twitter"></a></li>
