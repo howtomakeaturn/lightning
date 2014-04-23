@@ -36,15 +36,15 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="/common">Home</a>
+                    <li><a href="/">Home</a>
                     </li>
-                    <li><a href="/common/about">About</a>
+                    <li><a href="/about">About</a>
                     </li>
-                    <li><a href="/common/blog">Blog</a>
+                    <li><a href="/blog">Blog</a>
                     </li>
-                    <li><a href="/common/menu">Menu</a>
+                    <li><a href="/menu">Menu</a>
                     </li>
-                    <li><a href="/common/contact">Contact</a>
+                    <li><a href="/contact">Contact</a>
                     </li>
                 </ul>
             </div>

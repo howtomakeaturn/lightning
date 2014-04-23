@@ -30,7 +30,7 @@
         <div class="row-fluid">         
           <ul id="menu" class="sf-menu">
            <li>
-            <a href="index">Home</a>
+            <a href="/">Home</a>
               <ul>
                 <li><a href="index.html">Home Option One</a></li>
                 <li><a href="index_two.html">Home Option Two</a></li>
@@ -44,10 +44,10 @@
                 </li>
               </ul>
            </li>
-            <li><a href="about">About us</a></li>
-            <li><a href="/common/blog">Blog</a></li>
-            <li><a href="menu">Our menu</a></li>
-            <li><a href="contact">Contact us</a></li>
+            <li><a href="/about">About us</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/menu">Our menu</a></li>
+            <li><a href="/contact">Contact us</a></li>
           </ul>
         </div>
       </div>

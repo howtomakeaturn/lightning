@@ -210,7 +210,7 @@
 									<!-- Collect the nav links, forms, and other content for toggling -->
 									<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 										<ul class="nav navbar-nav">
-											<li><a href="/common/index"><img src="/assets/themes/cakefactory/img/nav-menu/nav1.jpg" class="img-responsive" alt="" /> Home</a></li>
+											<li><a href="/"><img src="/assets/themes/cakefactory/img/nav-menu/nav1.jpg" class="img-responsive" alt="" /> Home</a></li>
 											
 
 											<!--
@@ -238,13 +238,13 @@
 												</ul>
 											</li>
 											-->
-											<li><a href="/common/about"><img src="/assets/themes/cakefactory/img/nav-menu/nav6.jpg" class="img-responsive" alt="" /> About</a></li>
+											<li><a href="/about"><img src="/assets/themes/cakefactory/img/nav-menu/nav6.jpg" class="img-responsive" alt="" /> About</a></li>
 
-											<li><a href="/common/blog"><img src="/assets/themes/cakefactory/img/nav-menu/nav3.jpg" class="img-responsive" alt="" /> Blog</a></li>
+											<li><a href="/blog"><img src="/assets/themes/cakefactory/img/nav-menu/nav3.jpg" class="img-responsive" alt="" /> Blog</a></li>
 
-											<li><a href="/common/menu"><img src="/assets/themes/cakefactory/img/nav-menu/nav4.jpg" class="img-responsive" alt="" /> Menu</a></li>
+											<li><a href="/menu"><img src="/assets/themes/cakefactory/img/nav-menu/nav4.jpg" class="img-responsive" alt="" /> Menu</a></li>
 
-											<li><a href="/common/contact"><img src="/assets/themes/cakefactory/img/nav-menu/nav5.jpg" class="img-responsive" alt="" /> Contact</a></li>
+											<li><a href="/contact"><img src="/assets/themes/cakefactory/img/nav-menu/nav5.jpg" class="img-responsive" alt="" /> Contact</a></li>
 										</ul>
 									</div><!-- /.navbar-collapse -->
 								</div><!-- /.container-fluid -->
