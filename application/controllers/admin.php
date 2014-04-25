@@ -18,7 +18,7 @@ $this->router->fetch_class();
         }
     }
     function login(){
-        echo 'plz login';
+        $this->load->view('admin/login');
     }
     
     function index(){

@@ -37,4 +37,8 @@ class Intro extends MY_Controller{
         
         echo 'OK!';
     }
+    function support(){
+        $this->template->build('intro/support');
+    }
+    
 }

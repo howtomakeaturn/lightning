@@ -65,6 +65,7 @@
                             <li><a href="/intro/index">介紹</a></li>
                             <li><a href="/intro/why">為什麼幾萬元的官方網站，這裡只要月租費三百？</a></li>
                             <li class="active"><a href="/intro/signup">馬上申請</a></li>
+                            <li><a href="/intro/support">專人協助</a></li>
 <!--                            <li><a href="about.html">About</a></li>
 							<li class="dropdown">
                             <a href="page.html" class="dropdown-toggle">Page <b class="caret"></b></a>
