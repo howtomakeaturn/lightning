@@ -58,6 +58,7 @@
 <!--                  <li><a href="/admin/sort">順序</a></li>-->
                   <li><a href="/admin/layout">美觀</a></li>
                   <li><a href="/admin/support">支援</a></li>
+                  <li><a href="/admin/logout">登出</a></li>
                 </ul>
             </div>
         </div>
