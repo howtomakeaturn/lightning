@@ -14,6 +14,10 @@ class Common extends Public_Controller
         $this->template->build('about', $this->data);
     }
     function blog(){
+        $this->load->helper('text');
+        $this->load->model('Article_model');
+        $articles = $this->Article_model->as_array()->get_many_by('site_id', $this->data['site']->id);
+        $this->data['articles'] = $articles;
         $this->template->build('blog', $this->data);
     }
     function contact(){
