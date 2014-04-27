@@ -15,3 +15,7 @@ class MY_Controller extends CI_Controller{
         }
     }
 }
+
+function fuck($var){
+    show_error(var_export($var));
+}

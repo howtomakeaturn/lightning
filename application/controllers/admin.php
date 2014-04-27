@@ -17,9 +17,10 @@ class Admin extends MY_Controller
         }
     }
     function login(){
-        if ( $this->session->userdata('logged_in') ){            
+        if ( $this->session->userdata('logged_in') ){
+          
             $this->load->helper('url');
-            redirect('/admin');          
+            redirect('/admin');
         }
         
         $data = array('message'=>$this->session->flashdata('message'));
@@ -36,6 +37,10 @@ class Admin extends MY_Controller
         $password = $this->input->post('password');
         
         if ($this->simpleloginsecure->login($email, $password)){
+            $user_id = $this->session->userdata('user_id');
+            $this->load->model('Admin_model');
+            $site = $this->Admin_model->get_site_by_user_id($user_id);
+            $this->session->set_userdata('site_id', $site['site_id']);
             redirect('admin/index');
         }
         else{
@@ -64,7 +69,11 @@ class Admin extends MY_Controller
         $this->template->build('admin/sort');
     }
     function news(){
-        $this->template->build('admin/news');
+        $site_id = $this->session->userdata('site_id');
+        $this->load->database();
+        $this->load->model('Article_model');
+        $articles = $this->Article_model->as_array()->get_many_by('site_id', $site_id);
+        $this->template->build('admin/news', array( 'articles' => $articles));
     }
     function logout(){
         $this->load->library('SimpleLoginSecure');
