@@ -22,7 +22,7 @@
             <a class="btn btn-lg btn-default" href="http://<?php echo $subdomain . '.' . substr(base_url(), 7) ?>blog/<?php echo $article['id'] ?>" target='_blank'>
               <i class="fa fa-flag pull-left"></i>檢視
             </a>
-            <a class="btn btn-lg btn-warning" href="#">
+            <a class="btn btn-lg btn-warning" href="/admin/edit_news/<?php echo $article['id'] ?>">
               <i class="fa fa-flag pull-left"></i>編輯
             </a>
             <a class="btn btn-lg btn-danger" href="#">

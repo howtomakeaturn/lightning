@@ -93,6 +93,23 @@ class Admin extends MY_Controller
         $this->Admin_model->create_article(array('title'=>$title, 'content'=>$content));
         redirect('/admin/news');
     }
+    function edit_news($id){
+        $this->load->model('Article_model');
+        $article = $this->Article_model->get($id);
+        $this->template->build('admin/edit_news', array('article'=>$article));
+    }
+    function update_news(){
+        $this->load->helper('url');
+        if (!$this->is_post()){
+            redirect('/admin/news');
+        }
+        $id = $this->input->post('id');
+        $title = $this->input->post('title');
+        $content = $this->input->post('content');
+        $this->load->model('Article_model');        
+        $this->Article_model->update($id, array('title'=>$title, 'content'=>$content, 'modified_at'=>date('c')));
+        redirect('/admin/news');
+    }
     
     
     function logout(){
