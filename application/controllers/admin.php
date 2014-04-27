@@ -4,6 +4,7 @@ class Admin extends MY_Controller
     function __construct()
     {
         parent::__construct();
+        $this->load->database();
         $this->template->set_layout('admin');
         $this->load->library('session');
 
@@ -78,6 +79,22 @@ class Admin extends MY_Controller
         $this->load->helper('url');
         $this->template->build('admin/news', array( 'articles' => $articles, 'subdomain' => $subdomain));
     }
+    function add_news(){
+        $this->template->build('admin/add_news');
+    }
+    function post_news(){
+        $this->load->helper('url');
+        if (!$this->is_post()){
+            redirect('/admin/news');
+        }
+        $title = $this->input->post('title');
+        $content = $this->input->post('content');
+        $this->load->model('Admin_model');        
+        $this->Admin_model->create_article(array('title'=>$title, 'content'=>$content));
+        redirect('/admin/news');
+    }
+    
+    
     function logout(){
         $this->load->library('SimpleLoginSecure');
         $this->load->helper('url');

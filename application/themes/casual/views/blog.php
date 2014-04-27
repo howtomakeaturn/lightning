@@ -15,7 +15,7 @@
                     </h2>
                     <hr>
                 </div>
-                <?php foreach($articles as $article): ?>
+                <?php foreach(array_reverse($articles) as $article): ?>
                 <div class="col-lg-12 text-center">
                     <!--<img class="img-responsive img-border img-full" src="/assets/themes/casual/img/slide-2.jpg" alt="">-->
                     <h2><a href="/blog/<?php echo $article['id'] ?>"><?php echo $article['title'] ?></a>

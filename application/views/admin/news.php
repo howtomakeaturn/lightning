@@ -5,7 +5,7 @@
 
 </style>
 
-<h3>新聞<button class='btn btn-lg btn-primary'><i class="fa fa-pencil pull-left"></i>發布新聞</button></h3>
+<h3>新聞<a href='/admin/add_news' class='btn btn-lg btn-primary'><i class="fa fa-pencil pull-left"></i>發布新聞</a></h3>
 <p>您發布過這些新聞。</p>
 <table class='table table-hover table-bordered'>
     <tr>
@@ -14,9 +14,9 @@
         <th width=30%>操作</th>
     </tr>
 
-    <?php foreach($articles as $article): ?>
+    <?php foreach(array_reverse($articles) as $article): ?>
     <tr>
-        <td><a class='page_name' href='#'><?php echo $article['title'] ?></a></td>
+        <td><a class='page_name' href="http://<?php echo $subdomain . '.' . substr(base_url(), 7) ?>blog/<?php echo $article['id'] ?>" target='_blank'><?php echo $article['title'] ?></a></td>
         <td><?php echo $article['created_at'] ?></td>
         <td>
             <a class="btn btn-lg btn-default" href="http://<?php echo $subdomain . '.' . substr(base_url(), 7) ?>blog/<?php echo $article['id'] ?>" target='_blank'>
