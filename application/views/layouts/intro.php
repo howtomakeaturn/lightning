@@ -52,7 +52,7 @@
 
                     <div id="divLogo" class="pull-left">
                         <a href="/intro/index" id="divSiteTitle">網路印象</a><br />
-                        <a href="index.html" id="divTagLine">建立官方網站不再需要上萬元！<br />月租費三百！滿意再續租！</a>
+                        <!-- <a href="index.html" id="divTagLine">中小企業建立官網首選</a> -->
                     </div>
 
                     <div id="divMenuRight" class="pull-right">
@@ -63,8 +63,8 @@
                         <div class="nav-collapse collapse">
                             <ul class="nav nav-pills ddmenu">
                             <li><a href="/intro/index">介紹</a></li>
-                            <li><a href="/intro/why">為什麼幾萬元的官方網站，這裡只要月租費三百？</a></li>
-                            <li class="active"><a href="/intro/signup">馬上申請</a></li>
+                            <li><a href="/intro/why">理念</a></li>
+                            <li class="active"><a href="/intro/signup">申請</a></li>
                             <li><a href="/intro/support">專人協助</a></li>
 <!--                            <li><a href="about.html">About</a></li>
 							<li class="dropdown">

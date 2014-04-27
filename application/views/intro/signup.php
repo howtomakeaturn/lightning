@@ -4,7 +4,7 @@
         <div class="row-fluid">
             <!--Edit Main Content Area here-->
             <div class="span12" id="divMain">
-            <h1>填完下列資料，您的網站會直接做好給您試用！</h1>
+            <h1>申請</h1>
                   
 
             </div>
