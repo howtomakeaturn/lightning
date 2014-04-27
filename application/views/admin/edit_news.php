@@ -9,5 +9,5 @@
     <h3>內容</h3>
     <textarea name='content' class='form-control' rows='15'><?php echo $article->content ?></textarea>
     <input name='id' type='hidden' value='<?php echo $article->id ?>' />
-    <input type='submit' class='btn btn-success' value='確定'>
+    <input type='submit' class='btn btn-success' value='確定' onclick='return confirm("確定修改？")'>
 </form>

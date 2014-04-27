@@ -9,5 +9,5 @@
     <input name='title' type='text' class='form-control' />
     <h3>內容</h3>
     <textarea name='content' class='form-control' rows='15'></textarea>
-    <input type='submit' class='btn btn-success' value='確定'>
+    <input type='submit' class='btn btn-success' value='確定' onclick='return confirm("確定發布？")'>
 </form>

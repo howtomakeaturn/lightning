@@ -20,13 +20,13 @@
         <td><?php echo $article['created_at'] ?></td>
         <td>
             <a class="btn btn-lg btn-default" href="http://<?php echo $subdomain . '.' . substr(base_url(), 7) ?>blog/<?php echo $article['id'] ?>" target='_blank'>
-              <i class="fa fa-flag pull-left"></i>檢視
+              <i class="fa fa-external-link pull-left"></i>檢視
             </a>
             <a class="btn btn-lg btn-warning" href="/admin/edit_news/<?php echo $article['id'] ?>">
-              <i class="fa fa-flag pull-left"></i>編輯
+              <i class="fa fa-wrench pull-left"></i>編輯
             </a>
-            <a class="btn btn-lg btn-danger" href="/admin/delete_news/<?php echo $article['id'] ?>">
-              <i class="fa fa-flag pull-left"></i>刪除
+            <a class="btn btn-lg btn-danger" href="/admin/delete_news/<?php echo $article['id'] ?>" onclick='return confirm("確定刪除？")'>
+              <i class="fa fa-times pull-left"></i>刪除
             </a>        
         </td>
     </tr>    
