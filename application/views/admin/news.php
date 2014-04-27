@@ -25,7 +25,7 @@
             <a class="btn btn-lg btn-warning" href="/admin/edit_news/<?php echo $article['id'] ?>">
               <i class="fa fa-flag pull-left"></i>編輯
             </a>
-            <a class="btn btn-lg btn-danger" href="#">
+            <a class="btn btn-lg btn-danger" href="/admin/delete_news/<?php echo $article['id'] ?>">
               <i class="fa fa-flag pull-left"></i>刪除
             </a>        
         </td>

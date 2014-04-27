@@ -110,6 +110,12 @@ class Admin extends MY_Controller
         $this->Article_model->update($id, array('title'=>$title, 'content'=>$content, 'modified_at'=>date('c')));
         redirect('/admin/news');
     }
+    function delete_news($id){
+        $this->load->model('Article_model');
+        $article = $this->Article_model->delete($id);
+        $this->load->helper('url');
+        redirect('/admin/news');
+    }
     
     
     function logout(){
