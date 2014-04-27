@@ -49,6 +49,7 @@ else if (count($url_segments)==3){
     $route['default_controller'] = "common"; 
     $route['about'] = 'common/about';
     $route['blog'] = 'common/blog';
+    $route['blog/(:num)'] = "common/blog/$1";
     $route['menu'] = 'common/menu';
     $route['contact'] = 'common/contact';
 

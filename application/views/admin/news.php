@@ -19,7 +19,7 @@
         <td><a class='page_name' href='#'><?php echo $article['title'] ?></a></td>
         <td><?php echo $article['created_at'] ?></td>
         <td>
-            <a class="btn btn-lg btn-default" href="#">
+            <a class="btn btn-lg btn-default" href="http://<?php echo $subdomain . '.' . substr(base_url(), 7) ?>blog/<?php echo $article['id'] ?>" target='_blank'>
               <i class="fa fa-flag pull-left"></i>檢視
             </a>
             <a class="btn btn-lg btn-warning" href="#">

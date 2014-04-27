@@ -13,12 +13,22 @@ class Common extends Public_Controller
     function about(){
         $this->template->build('about', $this->data);
     }
-    function blog(){
-        $this->load->helper('text');
-        $this->load->model('Article_model');
-        $articles = $this->Article_model->as_array()->get_many_by('site_id', $this->data['site']->id);
-        $this->data['articles'] = $articles;
-        $this->template->build('blog', $this->data);
+    function blog($article_id=null){
+        if (empty($article_id)){
+            $this->load->helper('text');
+            $this->load->model('Article_model');
+            $articles = $this->Article_model->as_array()->get_many_by('site_id', $this->data['site']->id);
+            $this->data['articles'] = $articles;
+            $this->template->build('blog', $this->data);
+        }
+        else{
+            $this->load->library('typography');
+            $this->load->model('Article_model');
+            $article = $this->Article_model->as_array()->get($article_id);
+            $article['content'] = $this->typography->auto_typography($article['content']);
+            $this->data['article'] = $article;
+            $this->template->build('blog_view', $this->data);
+        }
     }
     function contact(){
         $this->template->build('contact', $this->data);

@@ -40,7 +40,8 @@ class Admin extends MY_Controller
             $user_id = $this->session->userdata('user_id');
             $this->load->model('Admin_model');
             $site = $this->Admin_model->get_site_by_user_id($user_id);
-            $this->session->set_userdata('site_id', $site['site_id']);
+            $this->session->set_userdata('site_id', $site['id']);
+            $this->session->set_userdata('site_subdomain', $site['subdomain']);
             redirect('admin/index');
         }
         else{
@@ -73,7 +74,9 @@ class Admin extends MY_Controller
         $this->load->database();
         $this->load->model('Article_model');
         $articles = $this->Article_model->as_array()->get_many_by('site_id', $site_id);
-        $this->template->build('admin/news', array( 'articles' => $articles));
+        $subdomain= $this->session->userdata('site_subdomain');
+        $this->load->helper('url');
+        $this->template->build('admin/news', array( 'articles' => $articles, 'subdomain' => $subdomain));
     }
     function logout(){
         $this->load->library('SimpleLoginSecure');
