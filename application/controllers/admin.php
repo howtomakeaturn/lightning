@@ -4,13 +4,10 @@ class Admin extends MY_Controller
     function __construct()
     {
         parent::__construct();
-        // Whatever
-#        $this->data['stuff'] = $whatever;
         $this->template->set_layout('admin');
         $this->load->library('session');
 
-$this->router->fetch_class();
-;
+        $this->router->fetch_class();
                 
         if( (!$this->session->userdata('logged_in'))&&($this->router->fetch_method()!='login')
               &&($this->router->fetch_method()!='verify'))
@@ -20,7 +17,7 @@ $this->router->fetch_class();
         }
     }
     function login(){
-        if ( $this->session->userdata('logged_in') ){
+        if ( $this->session->userdata('logged_in') ){            
             $this->load->helper('url');
             redirect('/admin');          
         }
