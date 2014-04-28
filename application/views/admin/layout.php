@@ -21,8 +21,22 @@
 <span class="help-block">例如：產品照片、公司照片、老闆照片、工廠照片，讓客戶更信任您。</span>
 <form method='post' action='/admin/upload_banner' enctype="multipart/form-data">
     <input type='file' name='userfile' class='form-control' />
-    <input type='submit' class='btn btn-success' value='上傳圖片' />
+    <input type='submit' class='btn btn-success' value='上傳圖片' onclick='return confirm("確定上傳圖片？")' />
 </form>
+
+<table class='table table-hover table-bordered'>
+    <caption>目前圖片</caption>
+    <tr>
+        <th>圖片</th>
+        <th>操作</th>
+    </tr>
+<?php foreach($banners as $banner): ?>
+    <tr>
+        <td><img width='200' src="<?php echo '/uploads/' . $banner['file_name'] ?>" /></td>
+        <td></td>
+    </tr>
+<?php endforeach; ?>
+</table>
 <!--
 <h3>設定您的背景圖片</h3>
 <div class='row'>

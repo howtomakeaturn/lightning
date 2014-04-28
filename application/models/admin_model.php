@@ -2,6 +2,8 @@
     /*
      * This is a service level model.
      * It allows session usage.
+
+     * Still inject the dependency if possible.
      * 
      * @author howtomakeaturn
      */
@@ -66,5 +68,14 @@ class Admin_model extends CI_Model {
         $this->db->insert('banners', $banner_data);
         
         return TRUE;        
+    }
+    function get_site_banners($site_id){
+        $query = $this->db->select('f.file_name')
+                                            ->from('banners b')
+                                            ->join('files f', 'f.id = b.file_id')
+                                            ->where('b.site_id', $site_id)
+                                            ->get();
+        
+        return $query->result_array();
     }
 }

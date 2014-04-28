@@ -16,6 +16,9 @@ class Admin extends MY_Controller
             $this->load->helper('url');
             redirect('/admin/login');
         }
+        
+        // this service model provides most of the functionality
+        $this->load->model('Admin_model');        
     }
     function login(){
         if ( $this->session->userdata('logged_in') ){
@@ -56,7 +59,9 @@ class Admin extends MY_Controller
         $this->template->build('admin/index');
     }
     function layout(){
-        $this->template->build('admin/layout');
+        $site_id = $this->session->userdata('site_id');
+        $banners = $this->Admin_model->get_site_banners($site_id);
+        $this->template->build('admin/layout', array('banners' => $banners));
     }
     function support(){
         $this->template->build('admin/support');
