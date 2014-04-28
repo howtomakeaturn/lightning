@@ -8,6 +8,9 @@ class Common extends Public_Controller
     }
     
     function index(){
+        $this->load->model('Admin_model');
+        $this->data['banners'] = $this->Admin_model->get_site_banners($this->data['site']->id);
+      
         $this->template->build('index', $this->data);
     }
     function about(){

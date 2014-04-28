@@ -5,22 +5,20 @@
                     <div id="carousel-example-generic" class="carousel slide">
                         <!-- Indicators -->
                         <ol class="carousel-indicators hidden-xs">
-                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            <?php foreach($banners as $index => $banner): ?>
+                            <li data-target="#carousel-example-generic" data-slide-to="<?php echo $index ?>" class="<?php if ($index==0) echo 'active' ?>"></li>
+                            <?php endforeach; ?>
                         </ol>
 
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
-                            <div class="item active">
-                                <img class="img-responsive img-full" src="/assets/themes/casual/img/slide-1.jpg" alt="">
+
+                            <?php foreach($banners as $index => $banner): ?>
+                            <div class="item<?php if ($index==0) echo ' active' ?>" >
+                                <img class="img-responsive img-full" src="<?php echo '/uploads/' . $banner['file_name'] ?>" alt="">
                             </div>
-                            <div class="item">
-                                <img class="img-responsive img-full" src="/assets/themes/casual/img/slide-2.jpg" alt="">
-                            </div>
-                            <div class="item">
-                                <img class="img-responsive img-full" src="/assets/themes/casual/img/slide-3.jpg" alt="">
-                            </div>
+                            <?php endforeach; ?>                          
+                          
                         </div>
 
                         <!-- Controls -->
