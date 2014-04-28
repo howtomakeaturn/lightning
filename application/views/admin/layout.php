@@ -19,13 +19,11 @@
 
 <h3>放幾張圖片到首頁嗎？</h3>
 <span class="help-block">例如：產品照片、公司照片、老闆照片、工廠照片，讓客戶更信任您。</span>
-<input type='file' class='form-control' />
-
-<label class='contact-information-text'>
-    <input type='checkbox' class='form-controls' />
-    暫不擺放圖片
-</label>
-
+<form method='post' action='/admin/upload_banner' enctype="multipart/form-data">
+    <input type='file' name='userfile' class='form-control' />
+    <input type='submit' class='btn btn-success' value='上傳圖片' />
+</form>
+<!--
 <h3>設定您的背景圖片</h3>
 <div class='row'>
     <div class='col-md-3'>
@@ -83,5 +81,4 @@
         <img src="/assets/img/background/Elegant_Background-12.jpg" class="thumbnail" alt="" />
     </div>
 </div>
-
-
+-->

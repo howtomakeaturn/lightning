@@ -116,7 +116,12 @@ class Admin extends MY_Controller
         $this->load->helper('url');
         redirect('/admin/news');
     }
-    
+    function upload_banner(){
+        $this->load->model('Admin_model');
+        $this->Admin_model->create_banner();
+        $this->load->helper('url');
+        redirect('/admin/layout');        
+    }    
     
     function logout(){
         $this->load->library('SimpleLoginSecure');
