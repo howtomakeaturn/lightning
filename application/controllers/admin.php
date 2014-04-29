@@ -17,18 +17,22 @@ class Admin extends MY_Controller
               &&($this->router->fetch_method()!='verify'))
         {
             redirect('/admin/login');
-            return;
         }
-        
-        // this service model provides most of the functionality
-        $this->load->model('Admin_model');        
-        $user_id = $this->session->userdata('user_id');
-        $this->load->model('Admin_model');
-        $site = $this->Admin_model->get_site_by_user_id($user_id);
-        $this->data['site'] = $site;
-        
-        // insert the message if it's in the flash session data
-        $this->data['message'] = $this->session->flashdata('message');
+        else{        
+            if ($this->router->fetch_method()=='login'){
+                return;
+            }
+          
+            // this service model provides most of the functionality
+            $this->load->model('Admin_model');        
+            $user_id = $this->session->userdata('user_id');
+            $this->load->model('Admin_model');
+            $site = $this->Admin_model->get_site_by_user_id($user_id);
+            $this->data['site'] = $site;
+            
+            // insert the message if it's in the flash session data
+            $this->data['message'] = $this->session->flashdata('message');
+        }
     }
     function login(){
         if ( $this->session->userdata('logged_in') ){
