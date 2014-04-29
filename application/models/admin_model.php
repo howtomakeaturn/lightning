@@ -118,4 +118,12 @@ class Admin_model extends CI_Model {
         return $this->db->where('id', $id)
                                    ->delete('menu_items');
     }
+    public function delete_menu($id){
+        $this->load->model('Menu_category_model');
+        $this->load->model('Menu_item_model');
+        
+        $this->Menu_category_model->delete($id);
+        $this->Menu_item_model->delete_by( array( 'category_id' => $id ) );
+        return TRUE;
+    }
 }

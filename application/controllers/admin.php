@@ -177,6 +177,28 @@ class Admin extends MY_Controller
         $this->load->helper('url');
         redirect('/admin/product');
     }
+    function edit_category($id){
+        $this->load->model('Menu_category_model');
+        $category = $this->Menu_category_model->get($id);
+        $this->template->build('admin/edit_category', array('category'=>$category));
+    }
+    function update_category(){
+        $this->load->helper('url');
+        if (!$this->is_post()){
+            redirect('/admin/product');
+        }
+        $id = $this->input->post('id');
+        $name = $this->input->post('name');
+        $this->load->model('Menu_category_model');        
+        $this->Menu_category_model->update($id, array('name'=>$name));
+        redirect('/admin/product');
+    }    
+    function delete_category($id){
+        $this->Admin_model->delete_menu($id);
+        $this->load->helper('url');
+        redirect('/admin/product');
+    }
+
     
     function logout(){
         $this->load->library('SimpleLoginSecure');
