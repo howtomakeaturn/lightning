@@ -25,7 +25,10 @@ class Admin extends MY_Controller
         $user_id = $this->session->userdata('user_id');
         $this->load->model('Admin_model');
         $site = $this->Admin_model->get_site_by_user_id($user_id);
-        $this->data['site'] = $site;        
+        $this->data['site'] = $site;
+        
+        // insert the message if it's in the flash session data
+        $this->data['message'] = $this->session->flashdata('message');
     }
     function login(){
         if ( $this->session->userdata('logged_in') ){
@@ -70,6 +73,7 @@ class Admin extends MY_Controller
     }
     function update_information(){
         $this->Admin_model->update_information();
+        $this->session->set_flashdata('message', '成功更新資料。');
         redirect('/admin/index');
     }
     
@@ -96,10 +100,10 @@ class Admin extends MY_Controller
         $site_id = $this->session->userdata('site_id');
         $this->load->database();
         $this->load->model('Article_model');
-        $articles = $this->Article_model->as_array()->get_many_by('site_id', $site_id);
-        $subdomain= $this->session->userdata('site_subdomain');
+        $this->data['articles'] = $this->Article_model->as_array()->get_many_by('site_id', $site_id);
+        $this->data['subdomain']= $this->session->userdata('site_subdomain');
         $this->load->helper('url');
-        $this->template->build('admin/news', array( 'articles' => $articles, 'subdomain' => $subdomain));
+        $this->template->build('admin/news', $this->data);
     }
     function add_news(){
         $this->template->build('admin/add_news');
@@ -113,6 +117,7 @@ class Admin extends MY_Controller
         $content = $this->input->post('content');
         $this->load->model('Admin_model');        
         $this->Admin_model->create_article(array('title'=>$title, 'content'=>$content));
+        $this->session->set_flashdata('message', '發布了一篇新聞。');
         redirect('/admin/news');
     }
     function edit_news($id){
@@ -130,12 +135,14 @@ class Admin extends MY_Controller
         $content = $this->input->post('content');
         $this->load->model('Article_model');        
         $this->Article_model->update($id, array('title'=>$title, 'content'=>$content, 'modified_at'=>date('c')));
+        $this->session->set_flashdata('message', '更新了一篇新聞。');
         redirect('/admin/news');
     }
     function delete_news($id){
         $this->load->model('Article_model');
         $article = $this->Article_model->delete($id);
         $this->load->helper('url');
+        $this->session->set_flashdata('message', '刪除了一篇新聞。');
         redirect('/admin/news');
     }
     function upload_banner(){

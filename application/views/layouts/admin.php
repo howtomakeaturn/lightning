@@ -35,6 +35,11 @@
                 padding-top: 20px;
             }
             
+            .message{
+                margin-top: 40px;
+                text-align: center;
+            }
+            
             @media (min-width:1200px) { 
                 .nav-tabs li a{
                     padding-left: 40px;
@@ -47,6 +52,12 @@
         <div id="background">
             <img src="/assets/img/background/Elegant_Background-2.jpg" class="stretch" alt="" />
         </div>
+
+        <?php if(!empty($message)): ?>
+        <div class='alert alert-success message'>
+            <strong><?php echo $message ?></strong>
+        </div>
+        <?php endif; ?>
       
         <div class="container">
             <div class="navbar-header">
