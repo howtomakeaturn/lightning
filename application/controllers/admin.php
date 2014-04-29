@@ -56,7 +56,9 @@ class Admin extends MY_Controller
     
     
     function index(){
-        $this->template->build('admin/index');
+        $this->load->helper('url');
+        $subdomain = $this->session->userdata('site_subdomain');
+        $this->template->build('admin/index', array('subdomain'=>$subdomain));
     }
     function layout(){
         $site_id = $this->session->userdata('site_id');
