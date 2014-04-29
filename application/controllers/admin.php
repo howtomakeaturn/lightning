@@ -70,7 +70,9 @@ class Admin extends MY_Controller
         $this->template->build('admin/page');
     }
     function product(){
-        $this->template->build('admin/product');
+        $site_id = $this->session->userdata('site_id');
+        $categories = $this->Admin_model->get_site_menu_categories($site_id);
+        $this->template->build('admin/product', array( 'categories' => $categories ));
     }
     function sort(){
         $this->template->build('admin/sort');
@@ -126,7 +128,32 @@ class Admin extends MY_Controller
         $this->Admin_model->create_banner();
         $this->load->helper('url');
         redirect('/admin/layout');        
-    }    
+    }
+    function add_category(){
+        $this->template->build('admin/add_category');
+    }
+    function post_category(){
+        $this->load->helper('url');
+        if (!$this->is_post()){
+            redirect('/admin/product');
+        }
+        $name = $this->input->post('name');
+        $this->Admin_model->create_menu_category(array('name'=>$name));
+        redirect('/admin/product');
+    }
+
+    function add_item($id){
+        $this->template->build('admin/add_item', array('category_id'=>$id));
+    }
+    function post_item(){
+        $this->load->helper('url');
+        if (!$this->is_post()){
+            redirect('/admin/product');
+        }
+        $this->Admin_model->create_menu_item();
+        redirect('/admin/product');
+    }
+
     
     function logout(){
         $this->load->library('SimpleLoginSecure');

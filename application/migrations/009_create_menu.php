@@ -37,7 +37,12 @@ class Migration_Create_menu extends CI_Migration {
             'name' => array(
               'type' => 'VARCHAR',
               'constraint' => '32'
+            ),
+            'price' => array(
+              'type' => 'VARCHAR',
+              'constraint' => '32'
             )
+            
         ));
         $this->dbforge->add_key('id', TRUE);
         $this->dbforge->create_table('menu_items');

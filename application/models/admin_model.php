@@ -78,4 +78,40 @@ class Admin_model extends CI_Model {
         
         return $query->result_array();
     }
+    public function create_menu_category($data){
+        $data = array(
+            'name' => $data['name'],
+            'site_id'           => $this->session->userdata('site_id')
+        );
+        
+        $this->db->insert('menu_categories', $data);
+        $id = $this->db->insert_id();
+        return $id;
+    }
+    function get_site_menu_categories($site_id){
+        $query = $this->db->from('menu_categories')
+                                            ->where('site_id', $site_id)
+                                            ->get();
+        $categories = $query->result_array();
+        
+        foreach($categories as &$category){
+            $category['items'] = 
+                $this->db->from('menu_items')
+                                  ->where('category_id', $category['id'])
+                                  ->get()->result_array();
+        }
+        
+        return $categories;
+    }
+    public function create_menu_item(){
+        $data = array(
+            'name' => $this->input->post('name'),
+            'price' => $this->input->post('price'),
+            'category_id' => $this->input->post('category_id')
+        );
+        
+        $this->db->insert('menu_items', $data);
+        $id = $this->db->insert_id();
+        return $id;
+    }
 }

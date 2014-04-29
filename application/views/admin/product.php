@@ -10,9 +10,42 @@
 
 <h3>
     產品目錄
-    <button class='btn btn-lg btn-primary'><i class="fa fa-folder-open pull-left"></i>增加類別</button>
+    <a href='/admin/add_category' class='btn btn-lg btn-primary'><i class="fa fa-folder-open pull-left"></i>增加類別</a>
 </h3>
 <p>您的產品目錄會展示這些產品。</p>
+
+<?php foreach($categories as $category): ?>
+<table class='table table-hover table-bordered'>
+    <caption class='product_caption'><?php echo $category['name'] ?>    <a href='/admin/add_item/<?php echo $category['id'] ?>' class='btn btn-lg btn-primary'><i class="fa fa-suitcase pull-left"></i>增加產品 </a>
+</caption>
+    <tr>
+        <th width=40%>產品名稱</th>
+        <th width=30%>價格</th>
+        <th width=30%>操作</th>
+    </tr>
+    <?php foreach($category['items'] as $item): ?>
+    <tr>
+        <td><strong><?php echo $item['name'] ?></strong></td>
+        <td><strong><?php echo $item['price'] ?></strong></td>
+        <td>
+            <a class="btn btn-lg btn-default" href="#">
+              <i class="fa fa-flag pull-left"></i>檢視
+            </a>
+            <a class="btn btn-lg btn-warning" href="#">
+              <i class="fa fa-flag pull-left"></i>編輯
+            </a>
+            <a class="btn btn-lg btn-danger" href="#">
+              <i class="fa fa-flag pull-left"></i>刪除
+            </a>        
+        </td>
+    </tr>    
+    <?php endforeach; ?>
+    
+    
+</table>
+
+<?php endforeach; ?>
+
 <table class='table table-hover table-bordered'>
     <caption class='product_caption'>增白劑系列    <button class='btn btn-lg btn-primary'><i class="fa fa-suitcase pull-left"></i>增加產品 </button>
 </caption>
