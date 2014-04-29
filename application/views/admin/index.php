@@ -4,17 +4,17 @@
     }
 </style>
 
-<h3>您公司的網址如下：</h3>
-<h4><a href='http://<?php echo $subdomain . '.' . substr(base_url(), 7) ?>' target='_blank'>http://<?php echo $subdomain . '.' . substr(base_url(), 7) ?></a></h4>
+<h3>貴公司的網址如下：</h3>
+<h4><a href='http://<?php echo $site['subdomain'] . '.' . substr(base_url(), 7) ?>' target='_blank'>http://<?php echo $site['subdomain'] . '.' . substr(base_url(), 7) ?></a></h4>
 
-<h3>您的公司名稱？</h3>
-<input type='text' class='form-control' />
+<h3>貴公司的名稱？</h3>
+<input value='<?php echo $site['name'] ?>' type='text' class='form-control' />
 
-<h3>簡介您的公司？</h3>
-<textarea class='form-control' rows='6'></textarea>
+<h3>貴公司的簡介？</h3>
+<textarea class='form-control' rows='6'><?php echo $site['intro'] ?></textarea>
 
 <h3>客戶要用哪支電話聯絡您？</h3>
-<input type='text' class='form-control' />
+<input value='<?php echo $site['contact_phone'] ?>' type='text' class='form-control' />
 <!--
 <label class='contact-information-text'>
     <input type='checkbox' class='form-controls' />
@@ -23,7 +23,7 @@
 -->
 
 <h3>客戶要用哪個信箱聯絡您？</h3>
-<input type='text' class='form-control' />
+<input value='<?php echo $site['contact_phone'] ?>' type='text' class='form-control' />
 <!--
 <label class='contact-information-text'>
     <input type='checkbox' class='form-controls' />
@@ -32,7 +32,7 @@
 -->
 
 <h3>客戶要用哪個地址聯絡您？</h3>
-<input type='text' class='form-control' />
+<input value='<?php echo $site['contact_address'] ?>' type='text' class='form-control' />
 <!--
 <label class='contact-information-text'>
     <input type='checkbox' class='form-controls' />

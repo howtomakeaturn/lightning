@@ -1,6 +1,8 @@
 <?php
 class Admin extends MY_Controller
 {
+    protected $data = array();
+  
     function __construct()
     {
         parent::__construct();
@@ -15,10 +17,15 @@ class Admin extends MY_Controller
         {
             $this->load->helper('url');
             redirect('/admin/login');
+            return;
         }
         
         // this service model provides most of the functionality
         $this->load->model('Admin_model');        
+        $user_id = $this->session->userdata('user_id');
+        $this->load->model('Admin_model');
+        $site = $this->Admin_model->get_site_by_user_id($user_id);
+        $this->data['site'] = $site;        
     }
     function login(){
         if ( $this->session->userdata('logged_in') ){
@@ -58,7 +65,8 @@ class Admin extends MY_Controller
     function index(){
         $this->load->helper('url');
         $subdomain = $this->session->userdata('site_subdomain');
-        $this->template->build('admin/index', array('subdomain'=>$subdomain));
+        $this->template->build('admin/index', $this->data);
+#        $this->template->build('admin/index', array('subdomain'=>$subdomain));
     }
     function layout(){
         $site_id = $this->session->userdata('site_id');
