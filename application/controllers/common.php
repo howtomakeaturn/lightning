@@ -37,6 +37,9 @@ class Common extends Public_Controller
         $this->template->build('contact', $this->data);
     }
     function menu(){
+        $this->load->model('Admin_model');
+        $cates = $this->Admin_model->get_site_menu_categories($this->data['site']->id);
+        $this->data['cates'] = $cates;
         $this->template->build('menu', $this->data);      
     }
 }

@@ -3,82 +3,27 @@
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center">Company <strong>Menu</strong>
+                    <h2 class="intro-text text-center"><?php echo $site->name ?> <strong>Menu</strong>
                     </h2>
                     <hr>
                 </div>
                 
-                <div class='col-lg-4 text-center'>
-                    <h2>Post Title
-                        <br>
-                        <small>October 13, 2013</small>
-                    </h2>
-                    <p>Fish Curie$29</p>
-                    <p>Consecrate Anglicising$49</p>
-                    <p>Consecrate Anglicising$39</p>
-                    <p>Creed do Modernism$22</p>
-                    <p>Fish Curie$15</p>
-                </div>
-
-                <div class='col-lg-4 text-center'>
-                    <h2>Post Title
-                        <br>
-                        <small>October 13, 2013</small>
-                    </h2>
-                    <p>Fish Curie$29</p>
-                    <p>Consecrate Anglicising$49</p>
-                    <p>Consecrate Anglicising$39</p>
-
-                </div>
-
-                <div class='col-lg-4 text-center'>
-                    <h2>Post Title
-                        <br>
-                        <small>October 13, 2013</small>
-                    </h2>
-                    <p>Fish Curie$29</p>
-                    <p>Consecrate Anglicising$49</p>
-
-                </div>
-
-                <div style='clear: both;'></div>
-
-                <div class='col-lg-4 text-center'>
-                    <h2>Post Title
-                        <br>
-                        <small>October 13, 2013</small>
-                    </h2>
-                    <p>Fish Curie$29</p>
-                    <p>Consecrate Anglicising$49</p>
-                    <p>Consecrate Anglicising$39</p>
-                    <p>Creed do Modernism$22</p>
-                    <p>Fish Curie$15</p>
-                </div>
-
-                <div class='col-lg-4 text-center'>
-                    <h2>Post Title
-                        <br>
-                        <small>October 13, 2013</small>
-                    </h2>
-                    <p>Fish Curie$29</p>
-                    <p>Consecrate Anglicising$49</p>
-                    <p>Consecrate Anglicising$39</p>
-                    <p>Creed do Modernism$22</p>
-                    <p>Fish Curie$15</p>
-                </div>
-
-                <div class='col-lg-4 text-center'>
-                    <h2>Post Title
-                        <br>
-                        <small>October 13, 2013</small>
-                    </h2>
-                    <p>Fish Curie$29</p>
-                    <p>Consecrate Anglicising$49</p>
-                    <p>Consecrate Anglicising$39</p>
-                    <p>Creed do Modernism$22</p>
-                    <p>Fish Curie$15</p>
-                </div>
-                
+                <?php foreach($cates as $index => $cate): ?>
+                    <div class='col-lg-4 text-center'>
+                        <h2><!--<?php echo $cate['name'] ?>
+                            <br>-->
+                            <small><?php echo $cate['name'] ?></small>
+                        </h2>
+                        <?php foreach($cate['items'] as $item): ?>
+                            <p><?php echo $item['name'] ?> <?php echo $item['price'] ?></p>
+                        <?php endforeach; ?>
+                    </div>
+                    
+                    <?php if($cates%3==0): ?>
+                    <div style='clear: both;'></div>
+                    <? endif; ?>
+                    
+                <?php endforeach; ?>
 
             </div>
         </div>
