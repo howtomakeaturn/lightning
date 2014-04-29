@@ -114,4 +114,8 @@ class Admin_model extends CI_Model {
         $id = $this->db->insert_id();
         return $id;
     }
+    public function delete_menu_item($id){
+        return $this->db->where('id', $id)
+                                   ->delete('menu_items');
+    }
 }

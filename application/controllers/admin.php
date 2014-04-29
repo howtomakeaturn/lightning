@@ -153,7 +153,28 @@ class Admin extends MY_Controller
         $this->Admin_model->create_menu_item();
         redirect('/admin/product');
     }
-
+    function edit_item($id){
+        $this->load->model('Menu_item_model');
+        $item = $this->Menu_item_model->get($id);
+        $this->template->build('admin/edit_item', array('item'=>$item));
+    }
+    function update_item(){
+        $this->load->helper('url');
+        if (!$this->is_post()){
+            redirect('/admin/product');
+        }
+        $id = $this->input->post('id');
+        $name = $this->input->post('name');
+        $price = $this->input->post('price');
+        $this->load->model('Menu_item_model');        
+        $this->Menu_item_model->update($id, array('name'=>$name, 'price'=>$price));
+        redirect('/admin/product');
+    }    
+    function delete_item($id){
+        $this->Admin_model->delete_menu_item($id);
+        $this->load->helper('url');
+        redirect('/admin/product');
+    }
     
     function logout(){
         $this->load->library('SimpleLoginSecure');

@@ -19,7 +19,7 @@
                         <?php endforeach; ?>
                     </div>
                     
-                    <?php if($cates%3==0): ?>
+                    <?php if($index%3==2): ?>
                     <div style='clear: both;'></div>
                     <? endif; ?>
                     
