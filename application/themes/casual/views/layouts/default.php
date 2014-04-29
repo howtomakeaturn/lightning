@@ -62,7 +62,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <p>Copyright &copy; 網路印象 2014</p>
+                    <p><?php echo $site->name ?> | <?php echo $site->contact_address ?> | <?php echo $site->contact_phone ?> | Copyright &copy; 網路印象 2014</p>
                 </div>
             </div>
         </div>
