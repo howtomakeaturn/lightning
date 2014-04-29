@@ -9,13 +9,13 @@ class Admin extends MY_Controller
         $this->load->database();
         $this->template->set_layout('admin');
         $this->load->library('session');
+        $this->load->helper('url');
 
         $this->router->fetch_class();
                 
         if( (!$this->session->userdata('logged_in'))&&($this->router->fetch_method()!='login')
               &&($this->router->fetch_method()!='verify'))
         {
-            $this->load->helper('url');
             redirect('/admin/login');
             return;
         }
@@ -68,6 +68,11 @@ class Admin extends MY_Controller
         $this->template->build('admin/index', $this->data);
 #        $this->template->build('admin/index', array('subdomain'=>$subdomain));
     }
+    function update_information(){
+        $this->Admin_model->update_information();
+        redirect('/admin/index');
+    }
+    
     function layout(){
         $site_id = $this->session->userdata('site_id');
         $banners = $this->Admin_model->get_site_banners($site_id);

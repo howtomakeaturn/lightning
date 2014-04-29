@@ -126,4 +126,20 @@ class Admin_model extends CI_Model {
         $this->Menu_item_model->delete_by( array( 'category_id' => $id ) );
         return TRUE;
     }
+    public function update_information(){
+        $data = array();
+        
+        $data['name'] = $this->input->post('name');
+        $data['intro'] = $this->input->post('intro');
+        $data['contact_phone'] = $this->input->post('contact_phone');
+        $data['contact_email'] = $this->input->post('contact_email');
+        $data['contact_address'] = $this->input->post('contact_address');
+        
+        $site_id = $this->session->userdata('site_id');
+        
+       # fuck($data);
+
+        $this->db->where('id', $site_id);
+        $this->db->update('sites', $data);
+    }
 }
