@@ -29,7 +29,7 @@
 </caption>
     <tr>
         <th colspan='3'>
-            <a href='/admin/add_item/<?php echo $category['id'] ?>' class='btn btn-sm btn-primary'><i class="fa fa-suitcase pull-left"></i>增加產品 </a>
+            <a href='/admin/add_item/<?php echo $category['id'] ?>' class='btn btn-sm btn-primary'><i class="fa fa-plus-square pull-left"></i>增加產品 </a>
         </th>
     </tr>
     <tr>

@@ -90,8 +90,8 @@ class Admin extends MY_Controller
     }
     function product(){
         $site_id = $this->session->userdata('site_id');
-        $categories = $this->Admin_model->get_site_menu_categories($site_id);
-        $this->template->build('admin/product', array( 'categories' => $categories ));
+        $this->data['categories'] = $this->Admin_model->get_site_menu_categories($site_id);
+        $this->template->build('admin/product', $this->data);
     }
     function sort(){
         $this->template->build('admin/sort');
@@ -161,6 +161,7 @@ class Admin extends MY_Controller
         }
         $name = $this->input->post('name');
         $this->Admin_model->create_menu_category(array('name'=>$name));
+        $this->session->set_flashdata('message', '增加了一種產品類別。');
         redirect('/admin/product');
     }
 
@@ -173,6 +174,7 @@ class Admin extends MY_Controller
             redirect('/admin/product');
         }
         $this->Admin_model->create_menu_item();
+        $this->session->set_flashdata('message', '新增了一筆產品資料。');
         redirect('/admin/product');
     }
     function edit_item($id){
@@ -190,11 +192,13 @@ class Admin extends MY_Controller
         $price = $this->input->post('price');
         $this->load->model('Menu_item_model');        
         $this->Menu_item_model->update($id, array('name'=>$name, 'price'=>$price));
+        $this->session->set_flashdata('message', '更新了一筆產品資料。');
         redirect('/admin/product');
     }    
     function delete_item($id){
         $this->Admin_model->delete_menu_item($id);
         $this->load->helper('url');
+        $this->session->set_flashdata('message', '刪除了一筆產品資料。');
         redirect('/admin/product');
     }
     function edit_category($id){
@@ -211,11 +215,13 @@ class Admin extends MY_Controller
         $name = $this->input->post('name');
         $this->load->model('Menu_category_model');        
         $this->Menu_category_model->update($id, array('name'=>$name));
+        $this->session->set_flashdata('message', '更新了一筆產品類別資料。');
         redirect('/admin/product');
     }    
     function delete_category($id){
         $this->Admin_model->delete_menu($id);
         $this->load->helper('url');
+        $this->session->set_flashdata('message', '刪除了一個產品類別。');
         redirect('/admin/product');
     }
 
