@@ -229,6 +229,12 @@ class Admin extends MY_Controller
         $this->session->set_flashdata('message', '刪除了一個產品類別。');
         redirect('/admin/product');
     }
+    function delete_banner($id){
+        $this->Admin_model->delete_banner($id);
+        $this->load->helper('url');
+        $this->session->set_flashdata('message', '刪除了一張圖片。');
+        redirect('/admin/layout');
+    }
 
     
     function logout(){

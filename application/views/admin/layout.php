@@ -33,7 +33,11 @@
 <?php foreach($banners as $banner): ?>
     <tr>
         <td><img width='200' src="<?php echo '/uploads/' . $banner['file_name'] ?>" /></td>
-        <td></td>
+        <td>
+            <a href='/admin/delete_banner/<?php echo $banner['banner_id'] ?>' class="btn btn-lg btn-danger" onclick='return confirm("確定刪除？")'>
+              <i class="fa fa-times pull-left"></i>刪除
+            </a>
+        </td>
     </tr>
 <?php endforeach; ?>
 </table>

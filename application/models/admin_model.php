@@ -70,7 +70,7 @@ class Admin_model extends CI_Model {
         return TRUE;        
     }
     function get_site_banners($site_id){
-        $query = $this->db->select('f.file_name')
+        $query = $this->db->select('f.file_name, b.id as banner_id')
                                             ->from('banners b')
                                             ->join('files f', 'f.id = b.file_id')
                                             ->where('b.site_id', $site_id)
@@ -78,6 +78,23 @@ class Admin_model extends CI_Model {
         
         return $query->result_array();
     }
+    function delete_banner($id){
+        $this->load->model('Banner_model');
+        $this->load->model('File_model');
+        
+        $banner = $this->Banner_model->get($id);
+        $file = $this->File_model->get($banner->file_id);
+        
+        // delete the image file
+        $file_sys_path = FCPATH . 'uploads/' . $file->file_name;
+        unlink($file_sys_path);
+
+        $this->Banner_model->delete($id);
+        $this->File_model->delete($banner->file_id);        
+        
+        return TRUE;
+    }
+    
     public function create_menu_category($data){
         $data = array(
             'name' => $data['name'],
