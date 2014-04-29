@@ -1,11 +1,12 @@
 <style>
+    /*
     h2 a{
       color: #333;
     }
     h2 a:hover{
       color: #333;
     }
-
+    */
 </style>
         <div class="row">
             <div class="box">
