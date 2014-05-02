@@ -11,11 +11,28 @@
 </style>
 
 <h3>您的公司有LOGO圖片嗎？</h3>
-<input type='file' class='form-control' />
-<label class='contact-information-text'>
-    <input type='checkbox' class='form-controls' />
-    暫不上傳LOGO圖片
-</label>
+<form method='post' action='/admin/upload_logo' enctype="multipart/form-data">
+    <input type='file' name='userfile' class='form-control' />
+    <input type='submit' class='btn btn-success' value='上傳LOGO' onclick='return confirm("確定上傳LOGO？")' />
+</form>
+
+<table class='table table-hover table-bordered'>
+    <caption>目前LOGO</caption>
+    <tr>
+        <th>圖片</th>
+        <th>操作</th>
+    </tr>
+<?php foreach($logos as $logo): ?>
+    <tr>
+        <td><img width='200' src="<?php echo '/uploads/' . $logo['file_name'] ?>" /></td>
+        <td>
+            <a href='/admin/delete_logo/<?php echo $logo['logo_id'] ?>' class="btn btn-lg btn-danger" onclick='return confirm("確定刪除？")'>
+              <i class="fa fa-times pull-left"></i>刪除
+            </a>
+        </td>
+    </tr>
+<?php endforeach; ?>
+</table>
 
 <h3>放幾張圖片到首頁嗎？</h3>
 <span class="help-block">例如：產品照片、公司照片、老闆照片、工廠照片，讓客戶更信任您。</span>

@@ -69,6 +69,46 @@ class Admin_model extends CI_Model {
         
         return TRUE;        
     }
+
+    public function create_logo(){
+        $config['upload_path'] = './uploads/';
+        $config['allowed_types'] = 'gif|jpg|png';
+        $config['encrypt_name'] = TRUE;
+
+        $this->load->library('upload', $config);
+
+        if ( !$this->upload->do_upload()){
+          $error = array('error' => $this->upload->display_errors());
+          show_error($error['error']);
+        }
+        
+        $upload_data = $this->upload->data();
+        $file_data = array(
+            'file_name' => $upload_data['file_name'],
+            'file_type' => $upload_data['file_type'],
+            'file_path' => $upload_data['file_path'],
+            'raw_name' => $upload_data['raw_name'],
+            'orig_name' => $upload_data['orig_name'],
+            'file_ext' => $upload_data['file_ext'],
+            'file_size' => $upload_data['file_size'],
+            'is_image' => $upload_data['is_image'],
+            'image_width' => $upload_data['image_width'],
+            'image_height' => $upload_data['image_height'],
+        );
+
+        $this->db->insert('files', $file_data);
+        
+        $file_id = $this->db->insert_id();
+        
+        $logo_data = array(
+            'site_id' => $this->session->userdata('site_id'),
+            'file_id'  => $file_id
+        );
+        $this->db->insert('logos', $logo_data);
+        
+        return TRUE;        
+    }
+
     function get_site_banners($site_id){
         $query = $this->db->select('f.file_name, b.id as banner_id')
                                             ->from('banners b')
@@ -78,6 +118,15 @@ class Admin_model extends CI_Model {
         
         return $query->result_array();
     }
+    function get_site_logos($site_id){
+        $query = $this->db->select('f.file_name, l.id as logo_id')
+                                            ->from('logos l')
+                                            ->join('files f', 'f.id = l.file_id')
+                                            ->where('l.site_id', $site_id)
+                                            ->get();
+        
+        return $query->result_array();
+    }    
     function delete_banner($id){
         $this->load->model('Banner_model');
         $this->load->model('File_model');
@@ -94,6 +143,24 @@ class Admin_model extends CI_Model {
         
         return TRUE;
     }
+
+    function delete_logo($id){
+        $this->load->model('Logo_model');
+        $this->load->model('File_model');
+        
+        $logo = $this->Logo_model->get($id);
+        $file = $this->File_model->get($logo->file_id);
+        
+        // delete the image file
+        $file_sys_path = FCPATH . 'uploads/' . $file->file_name;
+        unlink($file_sys_path);
+
+        $this->Logo_model->delete($id);
+        $this->File_model->delete($logo->file_id);        
+        
+        return TRUE;
+    }
+
     
     public function create_menu_category($data){
         $data = array(

@@ -83,6 +83,7 @@ class Admin extends MY_Controller
     
     function layout(){
         $site_id = $this->session->userdata('site_id');
+        $this->data['logos'] = $this->Admin_model->get_site_logos($site_id);
         $this->data['banners'] = $this->Admin_model->get_site_banners($site_id);
         $this->template->build('admin/layout', $this->data);
     }
@@ -154,6 +155,13 @@ class Admin extends MY_Controller
         $this->Admin_model->create_banner();
         $this->load->helper('url');
         $this->session->set_flashdata('message', '上傳了一張照片。');
+        redirect('/admin/layout');        
+    }
+    function upload_logo(){
+        $this->load->model('Admin_model');
+        $this->Admin_model->create_logo();
+        $this->load->helper('url');
+        $this->session->set_flashdata('message', '上傳了一張LOGO。');
         redirect('/admin/layout');        
     }
     function add_category(){
@@ -235,7 +243,12 @@ class Admin extends MY_Controller
         $this->session->set_flashdata('message', '刪除了一張圖片。');
         redirect('/admin/layout');
     }
-
+    function delete_logo($id){
+        $this->Admin_model->delete_logo($id);
+        $this->load->helper('url');
+        $this->session->set_flashdata('message', '刪除了一張LOGO。');
+        redirect('/admin/layout');
+    }
     
     function logout(){
         $this->load->library('SimpleLoginSecure');
