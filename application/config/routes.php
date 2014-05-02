@@ -41,7 +41,7 @@
 $url_host = $_SERVER['HTTP_HOST'];
 $url_segments = explode('.', $url_host);
 
-if (count($url_segments)==2){
+if ( (count($url_segments)==2) || ( (count($url_segments)==3) && $url_segments[0]=='www') ){
     $route['default_controller'] = "intro";
     $route['404_override'] = '';  
 }
