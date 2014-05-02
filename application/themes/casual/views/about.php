@@ -7,7 +7,11 @@
                     <hr>
                 </div>
                 <div class="col-md-6">
-                    <img class="img-responsive img-border-left" src="/assets/themes/casual/img/slide-2.jpg" alt="">
+                    <?php if (empty($logos)): ?>
+                        <img class="img-responsive img-border-left" src="/assets/themes/casual/img/slide-2.jpg" alt="">
+                    <?php else: ?>
+                        <img class="img-responsive img-border-left" src="<?php echo '/uploads/' . $logos[0]['file_name'] ?>" alt="">                    
+                    <?php endif; ?>
                 </div>
                 <div class="col-md-6">
                     <?php echo $site_intro ?>
