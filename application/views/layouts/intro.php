@@ -64,8 +64,8 @@
                             <ul class="nav nav-pills ddmenu">
                             <li><a href="/intro/index">介紹</a></li>
                             <li><a href="/intro/why">理念</a></li>
-                            <li class="active"><a href="/intro/signup">申請</a></li>
-                            <li><a href="/intro/support">專人協助</a></li>
+                            <li><a href="/intro/signup">申請</a></li>
+<!--                            <li><a href="/intro/support">專人協助</a></li>-->
 <!--                            <li><a href="about.html">About</a></li>
 							<li class="dropdown">
                             <a href="page.html" class="dropdown-toggle">Page <b class="caret"></b></a>
