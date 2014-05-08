@@ -15,6 +15,9 @@ class Common extends Public_Controller
         $intro = $this->typography->auto_typography($this->data['site']->intro);
         $this->data['site_intro'] = $intro;
 
+        $this->load->model('Admin_model');
+        $this->data['logos'] = $this->Admin_model->get_site_logos($this->data['site']->id);
+
         $this->load->helper('text');
         $this->load->model('Article_model');
         $this->data['articles'] = $this->Article_model->as_array()->get_many_by('site_id', $this->data['site']->id);

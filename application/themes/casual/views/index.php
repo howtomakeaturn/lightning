@@ -50,7 +50,16 @@
                     <h2 class="intro-text text-center">About <strong><?php echo $site->name ?></strong>
                     </h2>
                     <hr>
-                    <?php echo $site_intro ?>
+                    <div class="col-md-6">
+                        <?php if (empty($logos)): ?>
+                            <img class="img-responsive img-border-left" src="/assets/themes/casual/img/slide-2.jpg" alt="">
+                        <?php else: ?>
+                            <img class="img-responsive img-border-left" src="<?php echo '/uploads/' . $logos[0]['file_name'] ?>" alt="">                    
+                        <?php endif; ?>
+                    </div>
+                    <div class="col-md-6">
+                        <?php echo $site_intro ?>
+                    </div>
                     <!--
                     <img class="img-responsive img-border img-left" src="/themes/casual/img/intro-pic.jpg" alt="">
                     <hr class="visible-xs">
