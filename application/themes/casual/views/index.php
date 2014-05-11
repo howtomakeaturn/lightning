@@ -1,6 +1,6 @@
 <style>
-    .carousel-inner .item{
-        width: 840px;
+    .carousel{
+        width: 700px;
         margin: 0 auto;
     }
 </style>
