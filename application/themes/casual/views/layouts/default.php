@@ -40,8 +40,10 @@
                     </li>
                     <li><a href="/about">About</a>
                     </li>
+                    <?php if($site->show_blog): ?>
                     <li><a href="/blog">Blog</a>
                     </li>
+                    <?php endif; ?>
                     <li><a href="/menu">Menu</a>
                     </li>
                     <li><a href="/contact">Contact</a>

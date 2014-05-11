@@ -70,6 +70,8 @@
                 </div>
             </div>
         </div>
+          
+        <?php if($site->show_blog): ?>
 
         <div class="row">
             <div class="box">
@@ -98,3 +100,5 @@
                 </div>
             </div>
         </div>
+
+        <?php endif; ?>
