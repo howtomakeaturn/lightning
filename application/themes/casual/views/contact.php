@@ -32,7 +32,7 @@
                 <div class="col-md-4">
                     <p>電話： <strong><?php echo $site->contact_phone ?></strong>
                     </p>
-                    <p>Email: <strong><?php echo $site->contact_email ?></strong>
+                    <?php if (!empty($site->contact_email)): ?><p>Email: <strong><?php echo $site->contact_email ?></strong><?php endif; ?>
                     </p>
                     <p>地址：<?php echo $site->contact_address ?>
                     </p>
