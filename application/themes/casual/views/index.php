@@ -1,4 +1,11 @@
-
+<style>
+    .carousel-inner .item{
+        width: 840px;
+        margin: 0 auto;
+    }
+</style>
+  
+  
         <div class="row">
             <div class="box">
                 <div class="col-lg-12 text-center">
