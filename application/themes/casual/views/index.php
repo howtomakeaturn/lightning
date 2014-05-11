@@ -1,6 +1,6 @@
 <style>
     .carousel{
-        width: 700px;
+        width: 560px;
         margin: 0 auto;
     }
 </style>
