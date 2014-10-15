@@ -21,7 +21,7 @@
                     
                     <?php if($index%3==2): ?>
                     <div style='clear: both;'></div>
-                    <? endif; ?>
+                    <?php endif; ?>
                     
                 <?php endforeach; ?>
 
